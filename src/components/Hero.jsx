@@ -34,21 +34,21 @@ export const Hero = () => {
                 </div>
                 <div className="w-1/2 h-full flex items-center justify-between pr-2">
                    <div className='h-full w-135  flex justify-center items-center shadow-md card relative'>
-                    <img src="./src/assets/my-pic.png" alt="" className='brightness-60 h-90 w-90 rounded-full border border-white bg-[#4d77ff] shadow-lg'/>
+                    <img src="/my-pic.png" alt="" className='brightness-60 h-90 w-90 rounded-full border border-white bg-[#4d77ff] shadow-lg'/>
                     {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
                    </div>
                    <div className='block space-y-4 right-0'>
                     <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
-                        <img src="./src/assets/facebook.png" alt="" className='h-5 w-5 object-contain'/>
+                        <img src="/facebook.png" alt="" className='h-5 w-5 object-contain'/>
                     </div>
                     <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
-                        <img src="./src/assets/github.png" alt="" className='h-5 w-5 object-contain'/>
+                        <img src="/github.png" alt="" className='h-5 w-5 object-contain'/>
                     </div>
                     <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
-                        <img src="./src/assets/linkedIn.png" alt="" className='h-5 w-5 object-contain'/>
+                        <img src="/linkedIn.png" alt="" className='h-5 w-5 object-contain'/>
                     </div>
                     <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
-                        <img src="./src/assets/twitter.png" alt="" className='h-5 w-5 object-contain'/>
+                        <img src="/twitter.png" alt="" className='h-5 w-5 object-contain'/>
                     </div>
                    </div>
                 </div>
