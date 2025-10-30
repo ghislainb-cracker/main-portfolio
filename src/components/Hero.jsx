@@ -34,7 +34,7 @@ export const Hero = () => {
                 </div>
                 <div className="w-1/2 h-full flex items-center justify-between pr-2">
                    <div className='h-full w-135  flex justify-center items-center shadow-md card relative'>
-                    <img src="/my-pic.png" alt="" className='brightness-60 h-90 w-90 rounded-full border border-white bg-[#4d77ff] shadow-lg'/>
+                    <img src="/my-pic.jpeg" alt="" className='brightness-60 h-90 w-90 rounded-full border border-white bg-[#4d77ff] shadow-lg object-cover'/>
                     {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
                    </div>
                    <div className='block space-y-4 right-0'>
