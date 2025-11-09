@@ -2,7 +2,7 @@ main{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
 }
-.hero{
+body{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("/dot.png");
   background-position: center;
   background-size: cover;
