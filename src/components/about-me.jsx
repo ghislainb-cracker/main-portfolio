@@ -2,8 +2,8 @@ import React from "react";
 
 export default function AboutMe() {
     return (
-        <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black py-20 px-6">
-            <div className="max-w-4xl mx-auto">
+        <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
+            <div className="max-w-6xl mx-auto">
 
                 <div className="text-center mb-16">
                     <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
@@ -22,17 +22,20 @@ export default function AboutMe() {
                         </p>
 
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                            I am currently pursuing a Computer Science degree with a minor in Information and Data Science at
-                            <span className="text-[#80db66] font-semibold"> California Institute of Technology</span>.
+                            I am currently pursuing a SOftware Develpoment degree at: <br />
+                            <span className="text-[#80db66] font-semibold"> Mulindi Technical Secondary School</span>.
                         </p>
 
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                             When I'm not occupied with pursuing my career, I enjoy spending quality time with family and friends.
                         </p>
 
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                            Here are a few technologies I've been working with recently:
+                        </p>
 
                         <div className="flex flex-wrap gap-3 mt-8">
-                            {['Problem Solving', 'Software Development', 'Data Science', 'Innovation'].map((skill) => (
+                            {['JavaScript', 'Python', 'TypeScript', 'Node/Express', "React", "Dart", "PHP"].map((skill) => (
                                 <span
                                     key={skill}
                                     className="px-4 py-2 bg-gray-800 text-[#80db66] rounded-full text-sm font-medium border border-gray-700 hover:bg-gray-700 transition-colors duration-300"
@@ -49,7 +52,7 @@ export default function AboutMe() {
                             <div className="w-80 h-80 bg-gradient-to-br from-[#80db66] to-green-400 rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
 
                                 <div className="absolute inset-4 bg-gray-800 rounded-xl flex items-center justify-center">
-                                    <span className="text-gray-400 text-lg">Your Photo</span>
+                                    <span className="text-gray-400 text-2xl font-bold">Ghislain</span>
                                 </div>
                             </div>
                             <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#80db66] rounded-full opacity-20 animate-pulse"></div>
