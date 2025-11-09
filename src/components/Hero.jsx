@@ -28,29 +28,29 @@ export const Hero = () => {
                             <h3 className="text-2xl font-medium">A Passionate</h3>
                             <span id="animated-text" className="text-[#80db66] text-3xl font-bold"></span>
                         </div>
-                        <button className='mt-11 py-2 px-8 bg-[#4d77ff] text-white font-medium text-lg rounded-lg cursor-pointer flex items-center'>Say hello 🙌</button>
-                        
+                        <button className='mt-11 py-2 px-8 text-white font-medium text-lg rounded-lg cursor-pointer flex items-center bg-gradient-to-r from-[#4d77ff] to-[#4b6cff] hover:from-purple-600 hover:to-violet-500 transition-all duration-1000'>Say hello 🙌</button>
+
                     </div>
                 </div>
                 <div className="w-1/2 h-full flex items-center justify-between pr-2">
-                   <div className='h-full w-135  flex justify-center items-center shadow-md card relative'>
-                    <img src="/my-pic.jpeg" alt="" className='brightness-60 h-90 w-90 rounded-full border border-white bg-[#4d77ff] shadow-lg object-cover'/>
-                    {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
-                   </div>
-                   <div className='block space-y-4 right-0'>
-                    <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
-                        <img src="/facebook.png" alt="" className='h-5 w-5 object-contain'/>
+                    <div className='h-full w-135  flex justify-center items-center shadow-md card relative'>
+                        <img src="/my-pic.jpeg" alt="" className='brightness-60 h-90 w-90 rounded-full border border-white bg-[#4d77ff] shadow-lg object-cover' />
+                        {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
                     </div>
-                    <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
-                        <img src="/github.png" alt="" className='h-5 w-5 object-contain'/>
+                    <div className='block space-y-4 right-0'>
+                        <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
+                            <img src="/facebook.png" alt="" className='h-5 w-5 object-contain' />
+                        </div>
+                        <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
+                            <img src="/github.png" alt="" className='h-5 w-5 object-contain' />
+                        </div>
+                        <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
+                            <img src="/linkedIn.png" alt="" className='h-5 w-5 object-contain' />
+                        </div>
+                        <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
+                            <img src="/twitter.png" alt="" className='h-5 w-5 object-contain' />
+                        </div>
                     </div>
-                    <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
-                        <img src="/linkedIn.png" alt="" className='h-5 w-5 object-contain'/>
-                    </div>
-                    <div className='rounded h-12 w-12 border border-white flex justify-center items-center cursor-pointer hover:bg-[#4d77ff] hover:border-none'>
-                        <img src="/twitter.png" alt="" className='h-5 w-5 object-contain'/>
-                    </div>
-                   </div>
                 </div>
             </div>
         </>
