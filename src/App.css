@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 main{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -6,6 +10,62 @@ main{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("/dot.png");
   background-position: center;
   background-size: cover;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(0deg);
+  animation: rotate 20s linear infinite;
+  transition: transform 0.7s;
+}
+
+.image-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+
+.image-container span img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.btn-container {
+  position: relative;
+  width: 80%;
+}
+
+.btn {
+  position: absolute;
+  bottom: -80px;
+  background-color: slateblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(1.5);
+}
+
+.prev {
+  left: 0%;
+}
+
+.next {
+  right: 0%;
 }
 /* .card{
   background-color: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
