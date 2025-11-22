@@ -2,6 +2,7 @@ import { Nav } from "./components/nav"
 import { Hero } from "./components/Hero"
 import AboutMe from "./components/about-me";
 import Projects from "./components/projects";
+import Skills from "./components/skills";
 import "./App.css";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         
         <AboutMe/>
         <Projects/>
+        <Skills/>
         </div>
       </main>
     </>
