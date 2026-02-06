@@ -1,19 +1,19 @@
 import { useEffect } from 'react';
 
 export const Hero = () => {
-    // useEffect(() => {
-    //     const typed = new Typed("#animated-text", {
-    //         strings: ['Frontend Developer', 'Backend Developer', 'Fullstack Developer'],
-    //         typeSpeed: 150,
-    //         backSpeed: 90,
-    //         loop: true
-    //     });
+    useEffect(() => {
+        const typed = new Typed("#animated-text", {
+            strings: ['Frontend Developer', 'Backend Developer', 'Fullstack Developer'],
+            typeSpeed: 150,
+            backSpeed: 90,
+            loop: true
+        });
 
 
-    //     return () => {
-    //         typed.destroy();
-    //     };
-    // }, []);
+        return () => {
+            typed.destroy();
+        };
+    }, []);
 
     return (
         <>
