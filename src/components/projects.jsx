@@ -40,30 +40,30 @@ export default function Projects() {
           </h1>
         </div>
 
-        <div className="image-container mt-40 self-center" ref={imageContainerRef}>
+        <div className="image-container mt-30 mb-5 self-center" ref={imageContainerRef}>
           <span style={{ "--i": 1 }}>
-            <img src="https://picsum.photos/id/237/300/200" alt="" />
+            <img src="/one.png" alt=""/>
           </span>
           <span style={{ "--i": 2 }}>
-            <img src="https://picsum.photos/id/23/300/200" alt="" />
+            <img src="/two.png" alt=""/>
           </span>
           <span style={{ "--i": 3 }}>
-            <img src="https://picsum.photos/id/48/300/200" alt="" />
+            <img src="/three.png" alt=""/>
           </span>
           <span style={{ "--i": 4 }}>
-            <img src="https://picsum.photos/id/12/300/200" alt="" />
+            <img src="/four.png" alt=""/>
           </span>
           <span style={{ "--i": 5 }}>
-            <img src="https://picsum.photos/id/59/300/200" alt="" />
+            <img src="/five.png" alt=""/>
           </span>
           <span style={{ "--i": 6 }}>
-            <img src="https://picsum.photos/id/160/300/200" alt="" />
+            <img src="/six.png" alt=""/>
           </span>
           <span style={{ "--i": 7 }}>
-            <img src="https://picsum.photos/id/370/300/200" alt="" />
+            <img src="/seven.png" alt=""/>
           </span>
           <span style={{ "--i": 8 }}>
-            <img src="https://picsum.photos/id/478/300/200" alt="" />
+            <img src="/eight.png" alt=""/>
           </span>
         </div>
 
