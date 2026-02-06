@@ -38,7 +38,7 @@ export default function AboutMe() {
                             {['JavaScript', 'Python', 'TypeScript', 'Node/Express', "React", "Dart", "PHP"].map((skill) => (
                                 <span
                                     key={skill}
-                                    className="px-4 py-2 bg-gray-800 text-[#80db66] rounded-full text-sm font-medium border border-gray-700 hover:bg-gray-700 transition-colors duration-300"
+                                    className="px-4 py-2 cursor-pointer bg-gray-800 text-[#80db66] rounded-full text-sm font-medium border border-gray-700 hover:bg-black transition-colors duration-300"
                                 >
                                     {skill}
                                 </span>
@@ -52,7 +52,7 @@ export default function AboutMe() {
                             <div className="w-80 h-80 bg-gradient-to-br from-[#80db66] to-green-400 rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
 
                                 <div className="absolute inset-4 bg-gray-800 rounded-xl flex items-center justify-center">
-                                    <span className="text-gray-400 text-2xl font-bold">Ghislain</span>
+                                    <span className="text-gray-400 text-2xl font-bold"><h2 className="text-7xl">GB</h2></span>
                                 </div>
                             </div>
                             <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#80db66] rounded-full opacity-20 animate-pulse"></div>
