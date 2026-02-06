@@ -33,14 +33,14 @@ export default function Projects() {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-950/100 to-black">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto flex flex-col items-center justify-center">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             My <span className="text-[#80db66]">Projects</span>
           </h1>
         </div>
 
-        <div className="image-container mt-40" ref={imageContainerRef}>
+        <div className="image-container mt-40 self-center" ref={imageContainerRef}>
           <span style={{ "--i": 1 }}>
             <img src="https://picsum.photos/id/237/300/200" alt="" />
           </span>

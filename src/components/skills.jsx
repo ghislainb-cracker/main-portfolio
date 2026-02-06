@@ -29,20 +29,20 @@ export default function Skills() {
                     </span>
 
                     <div className="grid grid-cols-4 mt-16 gap-4">
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white"> <FaPython className="text-5xl"/> </div>
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white"> <FaHtml5 className="text-5xl"/> </div>
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white"> <FaReact className="text-5xl"/> </div>
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white"> <SiExpress className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <FaPython className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <FaHtml5 className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <FaReact className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <SiExpress className="text-5xl"/> </div>
                         
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white"> <FaPhp className="text-5xl"/> </div>
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white"> <FaNode className="text-5xl"/> </div>
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white"> <FaPython className="text-5xl"/> </div>
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white"> <FaGithub className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <FaPhp className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <FaNode className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <FaPython className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <FaGithub className="text-5xl"/> </div>
 
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center"> <FaCss3 className="text-5xl"/> </div>
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center"> <BiLogoTypescript className="text-5xl"/> </div>
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center"> <FaFigma className="text-5xl"/> </div>
-                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center"> <SiThreedotjs className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <FaCss3 className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <BiLogoTypescript className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <FaFigma className="text-5xl"/> </div>
+                        <div className="w-40 h-40 rounded-full border-1 border-white flex justify-center items-center cursor-pointer hover:bg-green-800 hover:text-white hover:text-4xl"> <SiThreedotjs className="text-5xl"/> </div>
                     </div>
                 </div>
             </div>
