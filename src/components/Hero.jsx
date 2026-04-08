@@ -28,6 +28,9 @@ export const Hero = () => {
                             <h3 className="text-2xl font-medium">A Passionate</h3>
                             <span id="animated-text" className="text-[#80db66] text-3xl font-bold"></span>
                         </div>
+                        <div className="text-gray-400 mt-4 items-center">
+                            <h3 className='ont-medium text-lg'>I build clean, responsive, and purposeful digital experiences.</h3>
+                        </div>
                         <button className='mt-11 py-2 px-8 text-white font-medium text-lg rounded-lg cursor-pointer flex items-center bg-gradient-to-r from-[#4d77ff] to-[#4b6cff] hover:from-purple-600 hover:to-violet-500 transition-all duration-1000'>Say hello 🙌</button>
 
                     </div>
