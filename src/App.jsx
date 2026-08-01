@@ -3,6 +3,8 @@ import { Hero } from "./components/Hero"
 import AboutMe from "./components/about-me";
 import Projects from "./components/projects";
 import Skills from "./components/skills";
+import Services from "./components/services";
+import Resume from "./components/Resume";
 import "./App.css";
 
 export default function App() {
@@ -14,8 +16,10 @@ export default function App() {
         <Hero/>
         
         <AboutMe/>
+        <Services/>
+        <Resume/>
         <Projects/>
-        <Skills/>
+        {/* <Skills/> */}
         </div>
       </main>
     </>
