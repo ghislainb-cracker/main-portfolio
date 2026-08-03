@@ -1,17 +1,20 @@
 import React, { useState } from "react";
+import { FaEye } from "react-icons/fa6";
 import {
     SiPython,
-    SiCplusplus,
     SiJavascript,
-    SiSwift,
-    SiGraphql,
-    SiRuby,
+    SiPostman,
+    SiTailwindcss,
     SiGithub,
     SiHtml5,
     SiCss3,
     SiDjango,
+    SiFastapi,
     SiReact,
     SiNodedotjs,
+    SiMongodb,
+    SiMysql,
+    SiPostgresql
 } from "react-icons/si";
 
 // Step 1: Put all your tab content in one place.
@@ -33,7 +36,11 @@ const resumeData = {
         description:
             "A blend of formal education and self-directed learning, focusing on Computer Science, Economics, and various programming technologies.",
         items: [
-            { date: "2016-2020", role: "BSc Computer Science", company: "University of Rwanda" },
+            { date: "July, 2016 - Aug, 2020", role: "AI software Engineering Training", company: "EjoLabs Summer Talent Program" },
+            { date: "Sep, 2023 - July, 2026", role: "High School Diploma", company: "Mulindi Technical Secondary School" },
+            { date: "Jan, 2026 - July, 2026", role: "The complete Full-stack web Developement Bootcamp", company: "Udemy" },
+            { date: "Dec, 2025 - June, 2026", role: "Learn Ethical Hacking From Scratch", company: "Udemy" },
+            { date: "Mar, 2024 - May, 2020", role: "Make an open source drone", company: "Udemy" },
             { date: "2014-2016", role: "High School Diploma", company: "Green Hills Academy" },
         ],
     },
@@ -52,28 +59,30 @@ const resumeData = {
 // Icon list for the Skills tab
 const skillsList = [
     { icon: SiPython, name: "Python" },
-    { icon: SiCplusplus, name: "C++" },
     { icon: SiJavascript, name: "JavaScript" },
-    { icon: SiSwift, name: "Swift" },
-    { icon: SiGraphql, name: "GraphQL" },
-    { icon: SiRuby, name: "Ruby" },
     { icon: SiGithub, name: "GitHub" },
+    { icon: SiPostman, name: "Postman" },
     { icon: SiNodedotjs, name: "Node.js" },
     { icon: SiHtml5, name: "HTML5" },
     { icon: SiCss3, name: "CSS3" },
+    { icon: SiTailwindcss, name: "TailwindCSS"},
+    { icon: SiPostgresql, name: "Postgresql" },
+    { icon: SiMongodb, name: "Mongodb" },
     { icon: SiDjango, name: "Django" },
+    { icon: SiFastapi, name: "FastAPI"},
     { icon: SiReact, name: "React" },
+    { icon: SiMysql, name: "MySQL" },
 ];
 
 // Personal info pairs for the About Me tab
 const aboutInfo = [
-    { label: "Name", value: "Germain Hirwa" },
-    { label: "Phone", value: "(+1) 484 475 7225" },
-    { label: "Experience", value: "4+ Years" },
-    { label: "GitHub", value: "germainhirwa" },
+    { label: "Name", value: "Byimbo Ghislain" },
+    { label: "Phone", value: "(+250) 786 470 055" },
+    { label: "Experience", value: "2+ Years" },
+    { label: "GitHub", value: "ghislain" },
     { label: "Nationality", value: "Rwandan" },
-    { label: "Email", value: "higermain1@gmail.com" },
-    { label: "Education", value: "Swarthmore College" },
+    { label: "Email", value: "byimbog250@gmail.com" },
+    { label: "Education", value: "High School Graduate" },
     { label: "Language", value: "English, French & Swahili" },
 ];
 
@@ -118,6 +127,13 @@ export default function Resume() {
                                     {tab.label}
                                 </button>
                             ))}
+
+                            <div className="w-full flex items-center justify-center mt-3">
+                            <button className="flex gap-2 bg-[#80db66] text-black items-center justify-center py-2 px-2 rounded-full">
+                                <FaEye/>
+                                View Resume
+                            </button>
+                            </div>
                         </div>
 
                         {/* Content that changes based on activeTab */}
@@ -156,7 +172,7 @@ export default function Resume() {
                                     ))
                                 ) : (
                                     activeContent.items.map((item, index) => (
-                                        <div key={index} className="h-40 bg-gray-800 p-3 pl-8 rounded-md">
+                                        <div key={index} className="h-40 border border-white/20 p-3 pl-8 rounded-md">
                                             {item.date && <p className="text-lg text-[#80db66]">{item.date}</p>}
                                             <h2 className="font-medium text-xl mt-2">{item.role}</h2>
                                             {item.company && <p className="text-white/70 mt-5">&gt;{item.company}</p>}

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ServiceCard({serviceNmuber, serviceName, Service_description}){
+export default function ServiceCard({serviceNumber, serviceName, Service_description}){
     return(
         <div className="group relative px-4 py-7 border border-white/20 text-gray-200 
   transition-all duration-300 ease-out
@@ -23,7 +23,7 @@ export default function ServiceCard({serviceNmuber, serviceName, Service_descrip
 
                             <span className="text-2xl text-[#80db66] 
       transition-transform duration-300 group-hover:scale-110 monoton-regular">
-                                {serviceNmuber}
+                                {serviceNumber}
                                 
                             </span>
                         </div>

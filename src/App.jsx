@@ -5,6 +5,8 @@ import Projects from "./components/projects";
 import Skills from "./components/skills";
 import Services from "./components/services";
 import Resume from "./components/Resume";
+import Contacts from "./components/MyContact";
+import Footer from "./components/Footer";
 import "./App.css";
 
 export default function App() {
@@ -19,6 +21,8 @@ export default function App() {
         <Services/>
         <Resume/>
         <Projects/>
+        <Contacts/>
+        <Footer/>
         {/* <Skills/> */}
         </div>
       </main>
