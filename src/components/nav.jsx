@@ -19,7 +19,7 @@ export const Nav = () => {
                 />
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-start justify-end z-50">
+                <div className="hidden md:flex items-center">
                     <ul className="flex gap-6 text-xl text-white mr-8">
                         {links.map((link) => (
                             <li 
@@ -38,7 +38,7 @@ export const Nav = () => {
 
 
                 {/* Mobile Burger */}
-                <div className="md:hidden flex items-center">
+                <div className="md:hidden flex items-start justify-end z-50 ">
                     <button 
                         onClick={() => setOpen(!open)}
                         className="text-white text-3xl"
