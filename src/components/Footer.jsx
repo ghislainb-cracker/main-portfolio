@@ -6,47 +6,47 @@ import { SiCodeforces, SiGmail, SiHuggingface, SiLeetcode } from "react-icons/si
 export default function Footer() {
     return (
         <div className="w-full h-25 bg-black border-t border-[#80db66] text-white flex flex-col justify-center items-center">
-            <div className="flex gap-6 text-3xl">
+            <div className="flex gap-3 text-xl lg:gap-6 lg:text-3xl">
 
                 <button>
-                <FaGithub  className="hover:text-[#80db66] cursor-pointer"/>
+                    <FaGithub className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <FaLinkedin  className="hover:text-[#80db66] cursor-pointer"/>
+                    <FaLinkedin className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <FaInstagram  className="hover:text-[#80db66] cursor-pointer"/>
+                    <FaInstagram className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <FaTwitter  className="hover:text-[#80db66] cursor-pointer"/>
+                    <FaTwitter className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <FaGitlab  className="hover:text-[#80db66] cursor-pointer"/>
+                    <FaGitlab className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <FaFacebook  className="hover:text-[#80db66] cursor-pointer"/>
+                    <FaFacebook className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <FaWhatsapp  className="hover:text-[#80db66] cursor-pointer"/>
+                    <FaWhatsapp className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <MdCall  className="hover:text-[#80db66] cursor-pointer"/>
+                    <MdCall className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <SiHuggingface  className="hover:text-[#80db66] cursor-pointer"/>
+                    <SiHuggingface className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <SiLeetcode className="hover:text-[#80db66] cursor-pointer"/>
+                    <SiLeetcode className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <SiCodeforces className="hover:text-[#80db66] cursor-pointer"/>
+                    <SiCodeforces className="hover:text-[#80db66] cursor-pointer" />
                 </button>
                 <button>
-                <SiGmail className="hover:text-[#80db66] cursor-pointer"/>
+                    <SiGmail className="hover:text-[#80db66] cursor-pointer" />
                 </button>
-                
+
             </div>
-            <div className="text-[16px] text-white/75 mt-2">
+            <div className="text-[12px]  lg:text-[16px] text-white/75 mt-2">
                 <p>&copy;2026 BYIMBO Ghislain. Coding For World</p>
             </div>
         </div>
