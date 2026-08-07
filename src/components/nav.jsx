@@ -9,7 +9,7 @@ export const Nav = () => {
 
     return (
         <div className="flex justify-center items-center px-4">
-            <nav className="md:fixed h-20 bg-[#4d77ff] flex justify-between items-center px-5 w-full max-w-6xl rounded-lg relative">
+            <nav className="fixed md:relative h-20 bg-[#4d77ff] flex justify-between items-center px-5 w-full max-w-6xl rounded-lg top-0 left-0 z-50">
 
                 
                 <img 
@@ -51,7 +51,7 @@ export const Nav = () => {
                 {/* Mobile Dropdown */}
                 {open && (
                     <div className="absolute top-20 left-0 w-full bg-[#4d77ff] rounded-lg shadow-lg md:hidden z-50">
-                        <ul className="flex flex-col items-end gap-5 py-6 text-xl text-white">
+                        <ul className="flex flex-col items-start gap-5 py-6 px-4 text-xl text-white">
                             {links.map((link) => (
                                 <li
                                     key={link}
