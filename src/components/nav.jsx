@@ -19,7 +19,7 @@ export const Nav = () => {
                 />
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center">
+                <div className="hidden md:flex items-start justify-end z-50">
                     <ul className="flex gap-6 text-xl text-white mr-8">
                         {links.map((link) => (
                             <li 
