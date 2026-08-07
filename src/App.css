@@ -235,6 +235,13 @@ main{
     border: 2px solid rgba(255, 255, 255, 0.08);
 }
 
+@media(max-width: 40rem) {
+  .image-container{
+    width: 90%;
+    height: 90%;
+  }
+}
+
 /* === Prev/Next Buttons === */
 .btn-container {
     display: flex;
