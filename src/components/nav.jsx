@@ -11,7 +11,7 @@ export const Nav = () => {
         <div className="flex justify-center items-center px-4">
             <nav className="md:fixed h-20 bg-[#4d77ff] flex justify-between items-center px-5 w-full max-w-6xl rounded-lg relative">
 
-                {/* Logo */}
+                
                 <img 
                     src="/ok.png" 
                     alt="Logo" 
