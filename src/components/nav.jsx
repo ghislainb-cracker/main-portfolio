@@ -38,7 +38,7 @@ export const Nav = () => {
 
 
                 {/* Mobile Burger */}
-                <div className="md:hidden flex items-start justify-end z-50 ">
+                <div className="md:hidden flex items-center">
                     <button 
                         onClick={() => setOpen(!open)}
                         className="text-white text-3xl"
@@ -50,8 +50,8 @@ export const Nav = () => {
 
                 {/* Mobile Dropdown */}
                 {open && (
-                    <div className="absolute top-20 left-0 w-full bg-[#4d77ff] rounded-lg shadow-lg md:hidden">
-                        <ul className="flex flex-col items-center gap-5 py-6 text-xl text-white">
+                    <div className="absolute top-20 left-0 w-full bg-[#4d77ff] rounded-lg shadow-lg md:hidden z-50">
+                        <ul className="flex flex-col items-start gap-5 py-6 text-xl text-white">
                             {links.map((link) => (
                                 <li
                                     key={link}
