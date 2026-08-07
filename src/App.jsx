@@ -12,7 +12,7 @@ import "./App.css";
 export default function App() {
   return (
     <>
-      <main>
+      <main className="overflow-hidden">
         <div className="w-full h-screen pt-4 hero">
         <Nav />
         <Hero/>
