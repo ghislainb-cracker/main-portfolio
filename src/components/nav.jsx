@@ -9,7 +9,7 @@ export const Nav = () => {
 
     return (
         <div className="flex justify-center items-center px-4">
-            <nav className="sm:fixed h-20 bg-[#4d77ff] flex justify-between items-center px-5 w-full max-w-6xl rounded-lg relative">
+            <nav className="h-20 bg-[#4d77ff] flex justify-between items-center px-5 w-full max-w-6xl rounded-lg relative">
 
                 
                 <img 

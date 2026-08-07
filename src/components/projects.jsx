@@ -12,7 +12,7 @@ const projects = [
     live: "https://yourportfolio.com",
   },
   {
-    title: "Project Two",
+    title: "Two",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["Node.js", "MongoDB"],
     image: "/two.png",
@@ -20,7 +20,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Project Three",
+    title: "Three",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["Python", "Django"],
     image: "/three.png",
@@ -28,7 +28,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Project Four",
+    title: "Four",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["React Native"],
     image: "/four.png",
@@ -36,7 +36,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Project Five",
+    title: "Five",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["JavaScript"],
     image: "/five.png",
@@ -44,7 +44,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Project Six",
+    title: "Six",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["TypeScript"],
     image: "/six.png",
@@ -52,7 +52,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Project Seven",
+    title: "Seven",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["Vue"],
     image: "/seven.png",
@@ -60,7 +60,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Project Eight",
+    title: "Eight",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["Express"],
     image: "/eight.png",
@@ -134,7 +134,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="btn-container flex gap-4 mb-10">
+        <div className="btn-container flex gap-4 mb-20 sm:mt-14">
           <button className="btn prev" onClick={prevEl}>
             Prev
           </button>
