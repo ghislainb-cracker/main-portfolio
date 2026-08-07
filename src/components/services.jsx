@@ -3,7 +3,7 @@ import ServiceCard from "./templates/service_card.jsx"
 
 export default function Services() {
     return (
-        <section className="min-h-screen md:block flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
+        <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
@@ -11,7 +11,7 @@ export default function Services() {
                     </h1>
                 </div>
 
-                <div className="grid gap-2 grid-cols-3 items-center justify-center">
+                <div className="grid gap-2 md:grid-cols-1 lg:grid-cols-3 items-center justify-center">
                     <ServiceCard
                         serviceNumber={"01"}
                         serviceName={"AI Development"}

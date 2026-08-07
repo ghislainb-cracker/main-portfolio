@@ -65,11 +65,11 @@ const skillsList = [
     { icon: SiNodedotjs, name: "Node.js" },
     { icon: SiHtml5, name: "HTML5" },
     { icon: SiCss3, name: "CSS3" },
-    { icon: SiTailwindcss, name: "TailwindCSS"},
+    { icon: SiTailwindcss, name: "TailwindCSS" },
     { icon: SiPostgresql, name: "Postgresql" },
     { icon: SiMongodb, name: "Mongodb" },
     { icon: SiDjango, name: "Django" },
-    { icon: SiFastapi, name: "FastAPI"},
+    { icon: SiFastapi, name: "FastAPI" },
     { icon: SiReact, name: "React" },
     { icon: SiMysql, name: "MySQL" },
 ];
@@ -99,91 +99,287 @@ export default function Resume() {
 
     return (
         <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
+
             <div className="max-w-6xl mx-auto px-5 w-full">
 
-                <div className="text-center mb-16">
-                    <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+                {/* Header */}
+                <div className="text-center mb-12 md:mb-16">
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
                         My <span className="text-[#80db66]">Resume</span>
                     </h1>
+
                     <div className="w-24 h-1 bg-[#80db66] mx-auto rounded-full"></div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-12 items-center">
 
-                    <div className="flex min-h-[400px] rounded-xl overflow-hidden">
 
-                        {/* Tab buttons */}
-                        <div className="w-[30%] flex flex-col pt-1 pr-3 space-y-4">
-                            {tabs.map((tab) => (
-                                <button
-                                    key={tab.key}
-                                    onClick={() => setActiveTab(tab.key)}
-                                    className={`w-full text-lg py-3 rounded-lg cursor-pointer transition-colors duration-200 ${
-                                        activeTab === tab.key
-                                            ? "bg-[#80db66] text-black"
-                                            : "bg-gray-800 text-white hover:bg-gray-700"
-                                    }`}
-                                >
-                                    {tab.label}
-                                </button>
-                            ))}
+                <div className="flex flex-col md:flex-row min-h-[500px] rounded-xl overflow-hidden gap-6">
 
-                            <div className="w-full flex items-center justify-center mt-3">
-                            <button className="flex gap-2 bg-[#80db66] text-black items-center justify-center py-2 px-2 rounded-full">
-                                <FaEye/>
-                                View Resume
-                            </button>
-                            </div>
-                        </div>
 
-                        {/* Content that changes based on activeTab */}
-                        <div className="w-[70%] flex flex-col text-white pl-5 scroll">
-                            <div>
-                                <h3 className="font-medium">{activeContent.title}</h3>
-                                <p className="mt-2 font-light text-white/80">
-                                    {activeContent.description}
-                                </p>
-                            </div>
+                    {/* Tabs */}
+                    <div className="
+            w-full 
+            md:w-[30%]
+            flex 
+            md:flex-col
+            flex-row
+            gap-3
+            overflow-x-auto
+            md:overflow-visible
+        ">
 
-                            <div
-                                className={`mt-3 h-110 overflow-y-scroll gap-2.5 pr-2 custom-scrollbar grid ${
-                                    activeTab === "skills" ? "grid-cols-4" : "grid-cols-2"
-                                }`}
+                        {tabs.map((tab) => (
+                            <button
+                                key={tab.key}
+                                onClick={() => setActiveTab(tab.key)}
+                                className={`
+                    min-w-fit
+                    md:w-full
+                    text-sm
+                    md:text-lg
+                    py-3
+                    px-5
+                    rounded-lg
+                    cursor-pointer
+                    transition-all
+                    
+                    ${activeTab === tab.key
+                                        ?
+                                        "bg-[#80db66] text-black"
+                                        :
+                                        "bg-gray-800 text-white hover:bg-gray-700"
+                                    }
+                    `}
                             >
-                                {activeTab === "skills" ? (
-                                    skillsList.map((skill, index) => {
-                                        const Icon = skill.icon;
-                                        return (
-                                            <div
-                                                key={index}
-                                                title={skill.name}
-                                                className="h-28 bg-gray-800 rounded-md flex items-center justify-center hover:bg-gray-700 transition-colors duration-200"
-                                            >
-                                                <Icon className="text-white text-4xl" />
-                                            </div>
-                                        );
-                                    })
-                                ) : activeTab === "about" ? (
-                                    aboutInfo.map((info, index) => (
-                                        <div key={index} className="flex flex-col mb-4">
-                                            <span className="text-white/50 text-sm">{info.label}</span>
-                                            <span className="font-semibold text-lg mt-1">{info.value}</span>
-                                        </div>
-                                    ))
-                                ) : (
-                                    activeContent.items.map((item, index) => (
-                                        <div key={index} className="h-40 border border-white/20 p-3 pl-8 rounded-md">
-                                            {item.date && <p className="text-lg text-[#80db66]">{item.date}</p>}
-                                            <h2 className="font-medium text-xl mt-2">{item.role}</h2>
-                                            {item.company && <p className="text-white/70 mt-5">&gt;{item.company}</p>}
-                                        </div>
-                                    ))
-                                )}
-                            </div>
-                        </div>
+                                {tab.label}
+                            </button>
+                        ))}
+
+
+                        <button
+                            className="
+            hidden
+            md:flex
+            gap-2
+            bg-[#80db66]
+            text-black
+            items-center
+            justify-center
+            py-3
+            rounded-full
+            mt-4
+            "
+                        >
+                            <FaEye />
+                            View Resume
+                        </button>
+
                     </div>
+
+
+
+
+                    {/* Content */}
+                    <div className="
+            w-full
+            md:w-[70%]
+            flex
+            flex-col
+            text-white
+            md:pl-5
+        ">
+
+
+                        <div>
+
+                            <h3 className="font-medium text-xl">
+                                {activeContent.title}
+                            </h3>
+
+
+                            <p className="
+                    mt-3
+                    text-white/80
+                    text-sm
+                    md:text-base
+                    leading-relaxed
+                ">
+                                {activeContent.description}
+                            </p>
+
+                        </div>
+
+
+
+
+                        <div
+                            className={`
+            mt-6
+            max-h-[450px]
+            overflow-y-auto
+            pr-2
+            custom-scrollbar
+            grid
+            gap-4
+
+            ${activeTab === "skills"
+                                    ?
+                                    "grid-cols-2 md:grid-cols-4"
+
+                                    :
+                                    activeTab === "about"
+                                        ?
+                                        "grid-cols-1 md:grid-cols-2"
+
+                                        :
+                                        "grid-cols-1 md:grid-cols-2"
+                                }
+
+            `}
+                        >
+
+
+
+                            {/* Skills */}
+                            {activeTab === "skills" && (
+                                skillsList.map((skill, index) => {
+
+                                    const Icon = skill.icon;
+
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="
+                        h-28
+                        bg-gray-800
+                        rounded-xl
+                        flex
+                        flex-col
+                        items-center
+                        justify-center
+                        gap-2
+                        hover:bg-gray-700
+                        transition
+                        "
+                                        >
+
+                                            <Icon className="text-3xl md:text-4xl" />
+
+                                            <span className="text-xs text-white/70">
+                                                {skill.name}
+                                            </span>
+
+                                        </div>
+                                    )
+                                })
+                            )}
+
+
+
+                            {/* About */}
+                            {activeTab === "about" && (
+                                aboutInfo.map((info, index) => (
+                                    <div
+                                        key={index}
+                                        className="
+                    bg-gray-900
+                    p-4
+                    rounded-lg
+                    "
+                                    >
+
+                                        <span className="text-white/50 text-sm">
+                                            {info.label}
+                                        </span>
+
+
+                                        <p className="font-semibold mt-1 break-words">
+                                            {info.value}
+                                        </p>
+
+                                    </div>
+                                ))
+                            )}
+
+
+
+
+                            {/* Experience / Education */}
+                            {activeTab !== "skills" && activeTab !== "about" && (
+
+                                activeContent.items.map((item, index) => (
+
+                                    <div
+                                        key={index}
+                                        className="
+                    min-h-40
+                    border
+                    border-white/20
+                    p-5
+                    rounded-xl
+                    bg-gray-900/40
+                    "
+                                    >
+
+                                        <p className="text-[#80db66]">
+                                            {item.date}
+                                        </p>
+
+
+                                        <h2 className="
+                    text-lg
+                    md:text-xl
+                    font-medium
+                    mt-2
+                    ">
+                                            {item.role}
+                                        </h2>
+
+
+                                        <p className="text-white/70 mt-4">
+                                            &gt; {item.company}
+                                        </p>
+
+
+                                    </div>
+
+                                ))
+
+                            )}
+
+
+                        </div>
+
+
+
+                        {/* Mobile Resume button */}
+                        <button
+                            className="
+            md:hidden
+            flex
+            gap-2
+            bg-[#80db66]
+            text-black
+            items-center
+            justify-center
+            py-3
+            rounded-full
+            mt-6
+            "
+                        >
+                            <FaEye />
+                            View Resume
+                        </button>
+
+
+
+                    </div>
+
+
                 </div>
+
             </div>
+
         </section>
     );
 }
