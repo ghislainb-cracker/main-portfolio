@@ -12,7 +12,6 @@ import "./App.css";
 export default function App() {
   return (
     <>
-    <Analytics>
       <main className="overflow-x-hidden">
         <div className="w-full h-screen pt-4 hero">
         <Nav />
@@ -27,7 +26,6 @@ export default function App() {
         {/* <Skills/> */}
         </div>
       </main>
-      </Analytics>
     </>
   )
 }
