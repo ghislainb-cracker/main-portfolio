@@ -12,7 +12,6 @@ const projects = [
     github: "https://github.com/ghislainb-cracker",
     live: "https://yourportfolio.com",
   },
-
   {
     title: "Afri-times News",
     description:
@@ -22,7 +21,6 @@ const projects = [
     github: "https://github.com/ghislainb-cracker",
     live: "",
   },
-
   {
     title: "Apollo Connect",
     description:
@@ -32,7 +30,6 @@ const projects = [
     github: "https://github.com/ghislainb-cracker",
     live: "",
   },
-
   {
     title: "Furn-Furniture",
     description:
@@ -42,7 +39,6 @@ const projects = [
     github: "https://github.com/ghislainb-cracker",
     live: "",
   },
-
   {
     title: "Koozi",
     description:
@@ -52,7 +48,6 @@ const projects = [
     github: "https://github.com/ghislainb-cracker",
     live: "https://koozi.vercel.app/",
   },
-
   {
     title: "Visionary",
     description:
@@ -62,7 +57,6 @@ const projects = [
     github: "https://github.com/ghislainb-cracker",
     live: "",
   },
-
   {
     title: "APSMS",
     description:
@@ -72,7 +66,6 @@ const projects = [
     github: "https://github.com/ghislainb-cracker",
     live: "",
   },
-
   {
     title: "Weather App",
     description:
@@ -82,7 +75,6 @@ const projects = [
     github: "https://github.com/ghislainb-cracker",
     live: "",
   },
-
   {
     title: "PangaTrip",
     description:
@@ -100,11 +92,13 @@ export default function Projects() {
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef(null);
 
-  // Step 2: Figure out which project is currently facing forward.
-  // Each rotation step is 45deg, and there are 8 images (360 / 8 = 45).
-  // We flip the sign and mod by projects.length to always land on a valid index.
+  // Step size derives from the actual number of projects,
+  // instead of being hardcoded to 45deg (which only worked for exactly 8 items).
+  const step = 360 / projects.length;
+
+  // Which project is currently facing forward, using the dynamic step.
   const activeIndex =
-    (((-x / 45) % projects.length) + projects.length) % projects.length;
+    (((-x / step) % projects.length) + projects.length) % projects.length;
   const activeProject = projects[activeIndex];
 
   const updateGallery = () => {
@@ -115,7 +109,7 @@ export default function Projects() {
     // Only keep auto-rotating if the user isn't hovering/paused
     if (!isPaused) {
       timerRef.current = setTimeout(() => {
-        setX((prev) => prev - 45);
+        setX((prev) => prev - step);
       }, 3000);
     }
   };
@@ -127,12 +121,12 @@ export default function Projects() {
 
   const prevEl = () => {
     clearTimeout(timerRef.current);
-    setX((prev) => prev + 45);
+    setX((prev) => prev + step);
   };
 
   const nextEl = () => {
     clearTimeout(timerRef.current);
-    setX((prev) => prev - 45);
+    setX((prev) => prev - step);
   };
 
   return (
@@ -153,7 +147,10 @@ export default function Projects() {
           onMouseLeave={() => setIsPaused(false)}
         >
           {projects.map((project, index) => (
-            <span key={index} style={{ "--i": index + 1 }}>
+            <span
+              key={index}
+              style={{ "--i": index + 1, "--step": `${step}deg` }}
+            >
               <img src={project.image} alt={project.title} />
             </span>
           ))}
