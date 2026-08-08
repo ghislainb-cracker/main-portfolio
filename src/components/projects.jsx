@@ -5,76 +5,93 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 const projects = [
   {
     title: "Lawfirm Website",
-    description: "A personal portfolio built with React and Tailwind CSS, featuring smooth animations and a dark theme.",
+    description:
+      "A professional law firm website designed to showcase legal services, build client trust, and make it easier for visitors to get in touch.",
     tags: ["React", "Tailwind CSS", "Vite"],
     image: "/one.png",
-    github: "https://github.com/yourusername/portfolio",
+    github: "https://github.com/ghislainb-cracker",
     live: "https://yourportfolio.com",
   },
+
   {
     title: "Afri-times News",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["Node.js", "MongoDB"],
+    description:
+      "A news platform focused on delivering African stories and updates through a clean, accessible interface for discovering and reading articles.",
+    tags: ["React", "Node.js", "MongoDB"],
     image: "/two.png",
-    github: "https://github.com/yourusername/project-two",
+    github: "https://github.com/ghislainb-cracker",
     live: "",
   },
+
   {
-    title: "apollo connect",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["Python", "Django"],
+    title: "Apollo Connect",
+    description:
+      "A class communication platform built to help students connect, share information, and communicate more easily within their school community.",
+    tags: ["React", "Socket.io", "Node.js"],
     image: "/three.png",
-    github: "https://github.com/yourusername/project-three",
+    github: "https://github.com/ghislainb-cracker",
     live: "",
   },
+
   {
-    title: "Furn-furniture",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["React Native"],
+    title: "Furn-Furniture",
+    description:
+      "A modern furniture shopping experience that helps users explore furniture products through a clean and visually focused interface.",
+    tags: ["React", "Tailwind CSS", "JavaScript"],
     image: "/four.png",
-    github: "https://github.com/yourusername/project-four",
+    github: "https://github.com/ghislainb-cracker",
     live: "",
   },
+
   {
     title: "Koozi",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["JavaScript"],
+    description:
+      "A student-focused saving platform designed to help young people build better saving habits and manage their money more intentionally.",
+    tags: ["React", "Firebase", "JavaScript"],
     image: "/five.png",
-    github: "https://github.com/yourusername/project-five",
-    live: "",
+    github: "https://github.com/ghislainb-cracker",
+    live: "https://koozi.vercel.app/",
   },
+
   {
     title: "Visionary",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["TypeScript"],
+    description:
+      "A technology project focused on turning ideas into practical digital experiences while exploring modern web development and intelligent solutions.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
     image: "/six.png",
-    github: "https://github.com/yourusername/project-six",
+    github: "https://github.com/ghislainb-cracker",
     live: "",
   },
+
   {
     title: "APSMS",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["Vue"],
+    description:
+      "A school management system designed to simplify academic administration, organize student information, and improve everyday school operations.",
+    tags: ["Vue", "JavaScript", "Node.js"],
     image: "/seven.png",
-    github: "https://github.com/yourusername/project-seven",
+    github: "https://github.com/ghislainb-cracker",
     live: "",
   },
+
   {
-    title: "Weather app",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["Express"],
+    title: "Weather App",
+    description:
+      "A weather application that provides users with real-time weather information through a simple and intuitive interface.",
+    tags: ["React", "Express", "API"],
     image: "/eight.png",
-    github: "https://github.com/yourusername/project-eight",
+    github: "https://github.com/ghislainb-cracker",
     live: "",
   },
+
   {
-    title: "Pangatrip",
-    description: "Short description of what this project does and the problem it solves.",
-    tags: ["Express"],
+    title: "PangaTrip",
+    description:
+      "An AI-powered Rwanda trip advisor that helps travelers discover places, plan itineraries, and get personalized recommendations faster.",
+    tags: ["React", "AI", "Vite", "Tailwind CSS"],
     image: "/pangatrip.png",
-    github: "https://github.com/yourusername/project-eight",
-    live: "",
-  }
+    github: "https://github.com/ghislainb-cracker",
+    live: "https://www.pangatrip.site",
+  },
 ];
 
 export default function Projects() {
