@@ -18,7 +18,7 @@ export const Hero = () => {
 
     return (
         <>
-            <div className="w-full min-h-[calc(100vh-100px)]">
+            <div id="home" className="w-full min-h-[calc(100vh-100px)]">
 
                 {/* MOBILE HERO */}
                 <div className="md:hidden flex flex-col items-center justify-center text-center px-5 pt-8">

@@ -3,7 +3,7 @@ import { FaDolly } from "react-icons/fa6";
 
 export default function AboutMe() {
     return (
-        <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
+        <section id="about" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
             <div className="max-w-6xl mx-auto">
 
                 <div className="text-center mb-16">
