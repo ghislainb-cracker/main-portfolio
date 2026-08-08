@@ -32,13 +32,13 @@ export const Hero = () => {
 
 
                     {/* Name inline */}
-                    <h1 className="text-5xl text-[#80db66] font-bold mt-8 tracking-wide">
+                    <h1 className="text-3xl text-[#80db66] font-bold mt-8 tracking-wide">
                         Ghislain Byimbo
                     </h1>
 
 
                     {/* Subtitle */}
-                    <p className="text-gray-400 text-xs mt-5 font-medium leading-relaxed">
+                    <p className="text-gray-400 text-[14px] mt-5 font-medium leading-relaxed">
                         I build software today with the ambition to build technology companies tomorrow
                     </p>
 
