@@ -27,7 +27,7 @@ export const Hero = () => {
                     <img 
                         src="/my-pic.jpeg" 
                         alt="Ghislain"
-                        className="h-56 w-56 rounded-full border border-white bg-[#4d77ff] shadow-lg object-cover brightness-75"
+                        className="h-62 w-62 rounded-full border border-white bg-[#4d77ff] shadow-lg object-cover brightness-75"
                     />
 
 
