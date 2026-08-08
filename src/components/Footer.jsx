@@ -9,40 +9,64 @@ export default function Footer() {
             <div className="flex gap-2 text-lg lg:gap-6 lg:text-3xl">
 
                 <button>
-                    <FaGithub className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <FaGithub className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <FaLinkedin className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <FaLinkedin className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <FaInstagram className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <FaInstagram className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <FaTwitter className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <FaTwitter className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <FaGitlab className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <FaGitlab className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <FaFacebook className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <FaFacebook className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <FaWhatsapp className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <FaWhatsapp className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <MdCall className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <MdCall className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <SiHuggingface className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <SiHuggingface className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <SiLeetcode className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <SiLeetcode className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <SiCodeforces className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <SiCodeforces className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
                 <button>
-                    <SiGmail className="hover:text-[#80db66] cursor-pointer" />
+                    <a href="">
+                        <SiGmail className="hover:text-[#80db66] cursor-pointer" />
+                    </a>
                 </button>
 
             </div>

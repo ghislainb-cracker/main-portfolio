@@ -4,7 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 // Step 1: Put all your project data in one place — easy to add/edit projects later
 const projects = [
   {
-    title: "Weather Application",
+    title: "Lawfirm Website",
     description: "A personal portfolio built with React and Tailwind CSS, featuring smooth animations and a dark theme.",
     tags: ["React", "Tailwind CSS", "Vite"],
     image: "/one.png",
@@ -12,7 +12,7 @@ const projects = [
     live: "https://yourportfolio.com",
   },
   {
-    title: "Two",
+    title: "Afri-times News",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["Node.js", "MongoDB"],
     image: "/two.png",
@@ -20,7 +20,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Three",
+    title: "apollo connect",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["Python", "Django"],
     image: "/three.png",
@@ -28,7 +28,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Four",
+    title: "Furn-furniture",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["React Native"],
     image: "/four.png",
@@ -36,7 +36,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Five",
+    title: "Koozi",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["JavaScript"],
     image: "/five.png",
@@ -44,7 +44,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Six",
+    title: "Visionary",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["TypeScript"],
     image: "/six.png",
@@ -52,7 +52,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Seven",
+    title: "APSMS",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["Vue"],
     image: "/seven.png",
@@ -60,13 +60,21 @@ const projects = [
     live: "",
   },
   {
-    title: "Eight",
+    title: "Weather app",
     description: "Short description of what this project does and the problem it solves.",
     tags: ["Express"],
     image: "/eight.png",
     github: "https://github.com/yourusername/project-eight",
     live: "",
   },
+  {
+    title: "Pangatrip",
+    description: "Short description of what this project does and the problem it solves.",
+    tags: ["Express"],
+    image: "/pangatrip.png",
+    github: "https://github.com/yourusername/project-eight",
+    live: "",
+  }
 ];
 
 export default function Projects() {

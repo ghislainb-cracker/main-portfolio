@@ -15,7 +15,7 @@ export const Nav = () => {
                 <img 
                     src="/ok.png" 
                     alt="Logo" 
-                    className="h-16 w-16 object-contain"
+                    className="h-16 w-16 lg:h-38 lg:w-38 object-contain"
                 />
 
                 {/* Desktop Menu */}

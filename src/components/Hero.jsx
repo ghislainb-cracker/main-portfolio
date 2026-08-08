@@ -38,8 +38,8 @@ export const Hero = () => {
 
 
                     {/* Subtitle */}
-                    <p className="text-gray-400 text-lg mt-5 font-medium leading-relaxed">
-                        I build clean, responsive, and purposeful digital experiences.
+                    <p className="text-gray-400 text-xs mt-5 font-medium leading-relaxed">
+                        I build software today with the ambition to build technology companies tomorrow
                     </p>
 
 
@@ -101,8 +101,8 @@ export const Hero = () => {
 
 
                             <div className="text-gray-400 mt-4">
-                                <h3 className="font-medium text-lg">
-                                    I build clean, responsive, and purposeful digital experiences.
+                                <h3 className="font-medium text-[14px]">
+                                    I build software today with the ambition to build technology companies tomorrow.
                                 </h3>
                             </div>
 

@@ -16,35 +16,30 @@ export default function AboutMe() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                    <div className="space-y-6">
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                            Passionate about computer science, driven by exploring opportunities and solving complex problems,
-                            I constantly seek new challenges and push boundaries by creating cutting-edge software and applications.
+                    <div className="space-y-3">
+                        <p className="text-lg md:text-lg text-gray-300 leading-relaxed">
+                            I'm Ghislain, a young software developer obsessed with one question: <span className="font-bold">What can I build that actually matters?</span>
                         </p>
 
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                            I am currently pursuing a SOftware Develpoment degree at: <br />
-                            <span className="text-[#80db66] font-semibold"> Mulindi Technical Secondary School</span>.
+                        <p className="text-lg md:text-lg text-gray-300 leading-relaxed">
+                            I didn't get into technology just to learn how to write code or build another website. I got into it because I see software as a way to turn ideas into things that can change how people live, work, and solve problems.
                         </p>
 
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                            When I'm not occupied with pursuing my career, I enjoy spending quality time with family and friends.
+                        <p className="text-lg md:text-lg text-gray-300 leading-relaxed">
+                            My path is taking me from software development into AI and product engineering. I'm learning how to build complete systems, from the interface people use, to the backend that powers it, to the intelligence that makes a product genuinely useful 
                         </p>
 
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                            Here are a few technologies I've been working with recently:
+                        <p className="text-lg md:text-lg text-gray-300 leading-relaxed">
+                            I've already started putting that philosophy into practice. <span className="font-bold">PangaTrip</span> is one example: an AI-powered travel platform I'm building around a real problem, making it easier for people to discover Rwanda and plan their trips.
                         </p>
 
-                        <div className="flex flex-wrap gap-3 mt-8">
-                            {['JavaScript', 'Python', 'TypeScript', 'Node/Express', "React", "Dart", "PHP"].map((skill) => (
-                                <span
-                                    key={skill}
-                                    className="px-4 py-2 cursor-pointer bg-gray-800 text-[#80db66] rounded-full text-sm font-medium border border-gray-700 hover:bg-black transition-colors duration-300"
-                                >
-                                    {skill}
-                                </span>
-                            ))}
-                        </div>
+                        <p className="text-lg md:text-lg text-gray-300 leading-relaxed">
+                            But PangaTrip is only the beginning. My bigger ambition is to become an AI-focused software engineer and eventually build technology products and companies from Africa that can compete beyond Africa.
+                        </p>
+
+                        <p className="text-lg md:text-lg text-gray-300 leading-relaxed">
+                            I'm deliberately using these early years to develop the skills, discipline, and experience required to make that ambition real. I don't want to spend my career only building what someone else imagines. I want to become capable of imagining, building, and leading what comes next.
+                        </p>
                     </div>
 
 
