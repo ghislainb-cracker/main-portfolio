@@ -98,7 +98,7 @@ export default function Resume() {
     const activeContent = resumeData[activeTab];
 
     return (
-        <section id="resume" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
+        <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
 
             <div className="max-w-6xl mx-auto px-5 w-full">
 

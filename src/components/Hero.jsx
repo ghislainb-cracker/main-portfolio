@@ -1,21 +1,4 @@
-import { useEffect } from 'react';
-// import Typed from 'typed.js';
-
 export const Hero = () => {
-
-    useEffect(() => {
-        const typed = new Typed("#animated-text", {
-            strings: ['Frontend Developer', 'Backend Developer', 'Fullstack Developer'],
-            typeSpeed: 150,
-            backSpeed: 90,
-            loop: true
-        });
-
-        return () => {
-            typed.destroy();
-        };
-    }, []);
-
     return (
         <>
             <div id="home" className="w-full min-h-[calc(100vh-100px)]">
@@ -93,10 +76,9 @@ export const Hero = () => {
                                     A Passionate
                                 </h3>
 
-                                <span 
-                                    id="animated-text" 
-                                    className="text-[#80db66] text-3xl font-bold"
-                                ></span>
+                                <span className="text-[#80db66] text-3xl font-bold">
+                                    Frontend Developer
+                                </span>
                             </div>
 
 

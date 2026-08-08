@@ -130,7 +130,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-950/100 to-black py-20">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-950/100 to-black py-20">
       <div className="max-w-2xl mx-auto flex flex-col items-center justify-center px-5">
         <div className="text-center mb-10">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">

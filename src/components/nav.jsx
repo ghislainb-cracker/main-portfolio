@@ -5,14 +5,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 export const Nav = () => {
     const [open, setOpen] = useState(false);
 
-    const links = [
-        { title: "Home", href: "#home" },
-        { title: "About Me", href: "#about" },
-        { title: "Services", href: "#services" },
-        { title: "Resume", href: "#resume" },
-        { title: "Projects", href: "#projects" },
-        { title: "Contact", href: "#contact" },
-    ];
+    const links = ["Home", "About Me", "Services", "Resume", "Projects", "Contact"];
 
     return (
         <div className="flex justify-center items-center px-4">
@@ -29,13 +22,11 @@ export const Nav = () => {
                 <div className="hidden md:flex items-center">
                     <ul className="flex gap-6 text-xl text-white mr-8">
                         {links.map((link) => (
-                            <li key={link.title} className="font-medium">
-                                <a
-                                    href={link.href}
-                                    className="hover:text-green-500 transition-all duration-300 cursor-pointer"
-                                >
-                                    {link.title}
-                                </a>
+                            <li 
+                                key={link}
+                                className="hover:text-green-500 transition-all duration-300 cursor-pointer font-medium"
+                            >
+                                {link}
                             </li>
                         ))}
                     </ul>
@@ -62,14 +53,12 @@ export const Nav = () => {
                     <div className="absolute top-20 left-0 w-full bg-[#4d77ff] rounded-lg shadow-lg md:hidden z-50">
                         <ul className="flex flex-col items-start gap-5 py-6 px-4 text-xl text-white">
                             {links.map((link) => (
-                                <li key={link.title} className="w-full">
-                                    <a
-                                        href={link.href}
-                                        onClick={() => setOpen(false)}
-                                        className="block w-full hover:text-green-500 transition-all duration-300 cursor-pointer font-medium"
-                                    >
-                                        {link.title}
-                                    </a>
+                                <li
+                                    key={link}
+                                    onClick={() => setOpen(false)}
+                                    className="hover:text-green-500 transition-all duration-300 cursor-pointer font-medium"
+                                >
+                                    {link}
                                 </li>
                             ))}
 
