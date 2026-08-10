@@ -14,6 +14,15 @@ export const Nav = () => {
         { title: "Contact", href: "#contact" },
     ];
 
+    const handleNavClick = (event, href) => {
+        event.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        setOpen(false);
+    };
+
     return (
         <div className="flex justify-center items-center px-4">
             <nav className="h-20 bg-[#4d77ff] flex justify-between items-center px-5 w-full max-w-6xl rounded-lg relative">
@@ -32,6 +41,7 @@ export const Nav = () => {
                             <li key={link.title} className="font-medium">
                                 <a
                                     href={link.href}
+                                    onClick={(event) => handleNavClick(event, link.href)}
                                     className="hover:text-green-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 active:scale-95 cursor-pointer"
                                 >
                                     {link.title}
@@ -65,7 +75,7 @@ export const Nav = () => {
                                 <li key={link.title} className="w-full">
                                     <a
                                         href={link.href}
-                                        onClick={() => setOpen(false)}
+                                        onClick={(event) => handleNavClick(event, link.href)}
                                         className="block w-full hover:text-green-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 active:scale-95 cursor-pointer font-medium"
                                     >
                                         {link.title}

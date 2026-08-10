@@ -1,17 +1,35 @@
+html {
+  scroll-behavior: smooth;
+}
 
-
-body{
+body {
   margin: 0;
   padding: 0;
 }
-main{
+
+main {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
 }
-.hero{
+
+.hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("/dot.png");
   background-position: center;
   background-size: cover;
+}
+
+section,
+div#home {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+section.visible,
+div#home.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* .image-container {
@@ -188,80 +206,90 @@ main{
 
 /* Custom scrollbar for the resume content box */
 .custom-scrollbar {
-    scrollbar-width: thin; /* Firefox: makes it thin instead of default fat one */
-    scrollbar-color: #80db66 #1f2937; /* Firefox: thumb color, track color */
+  scrollbar-width: thin;
+  /* Firefox: makes it thin instead of default fat one */
+  scrollbar-color: #80db66 #1f2937;
+  /* Firefox: thumb color, track color */
 }
 
 /* Chrome, Edge, Safari (webkit browsers) */
 .custom-scrollbar::-webkit-scrollbar {
-    width: 8px; /* how wide the scrollbar is */
+  width: 8px;
+  /* how wide the scrollbar is */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-    background: #1f2937; /* the track (background) color — matches gray-800 */
-    border-radius: 10px;
+  background: #1f2937;
+  /* the track (background) color — matches gray-800 */
+  border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #80db66; /* the draggable scrollbar bar, matches your theme green */
-    border-radius: 10px;
-    border: 2px solid #1f2937; /* creates a little padding effect around the thumb */
+  background-color: #80db66;
+  /* the draggable scrollbar bar, matches your theme green */
+  border-radius: 10px;
+  border: 2px solid #1f2937;
+  /* creates a little padding effect around the thumb */
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: #6bc454; /* slightly darker green on hover */
+  background-color: #6bc454;
+  /* slightly darker green on hover */
 }
 
 
 .image-container {
-    position: relative;
-    width: 340px;   /* was 200px — widened so full screenshots fit better */
-    height: 150px;
-    transform-style: preserve-3d;
-    transition: transform 1s ease-in-out;
+  position: relative;
+  width: 340px;
+  /* was 200px — widened so full screenshots fit better */
+  height: 150px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
 }
 
 .image-container span {
-    position: absolute;
-    inset: 0;
-    transform: rotateY(calc(var(--i) * var(--step))) translateZ(467px);
+  position: absolute;
+  inset: 0;
+  transform: rotateY(calc(var(--i) * var(--step))) translateZ(467px);
 }
 
 .image-container span img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;  /* was "cover" — this shows the WHOLE image, no cropping */
-    /* background-color: #111827; fills empty space around the image so it doesn't look like a hole */
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* was "cover" — this shows the WHOLE image, no cropping */
+  /* background-color: #111827; fills empty space around the image so it doesn't look like a hole */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.08);
 }
 
 /* === Prev/Next Buttons === */
 .btn-container {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .btn {
-    padding: 0.6rem 1.6rem;
-    border-radius: 9999px;
-    background-color: #1f2937; /* gray-800 */
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background-color 0.2s ease, transform 0.15s ease;
+  padding: 0.6rem 1.6rem;
+  border-radius: 9999px;
+  background-color: #1f2937;
+  /* gray-800 */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .btn:hover {
-    background-color: #80db66;
-    color: black;
-    transform: translateY(-2px);
+  background-color: #80db66;
+  color: black;
+  transform: translateY(-2px);
 }
 
 .btn:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 
