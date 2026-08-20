@@ -41,7 +41,7 @@ const resumeData = {
             { date: "Jan, 2026 - July, 2026", role: "The complete Full-stack web Developement Bootcamp", company: "Udemy" },
             { date: "Dec, 2025 - June, 2026", role: "Learn Ethical Hacking From Scratch", company: "Udemy" },
             { date: "Mar, 2024 - May, 2020", role: "Make an open source drone", company: "Udemy" },
-            { date: "2014-2016", role: "High School Diploma", company: "Green Hills Academy" },
+            { date: "2014-2016", role: "Primary", company: "Green Hills Academy" },
         ],
     },
     skills: {
