@@ -24,11 +24,10 @@ const resumeData = {
         description:
             "A track record of impactful roles in software engineering and IT, demonstrating skills in various programming languages and technologies.",
         items: [
-            { date: "Mar, 2020-May,2021", role: "Software Engineer Intern", company: "Techrise Rwanda" },
-            { date: "2021-2022", role: "Software Engineer", company: "Techrise Rwanda" },
-            { date: "2022-2023", role: "Frontend Developer", company: "Techrise Rwanda" },
-            { date: "2023-2024", role: "Backend Developer", company: "Techrise Rwanda" },
-            { date: "2024-2025", role: "Full Stack Developer", company: "Techrise Rwanda" },
+            { date: "Aug, 2026-Present", role: "Full-time Software Engineer", company: "Afriforge" },
+            { date: "Apr, 2026-May, 2026", role: "Software Engineer Intern", company: "LandO'clock" },
+            { date: "Dec, 2025-Present", role: "Fullstack Developer", company: "Upwork" },
+            { date: "Mar, 2025-May, 2025", role: "Software Engineer Intern", company: "Techrise Rwanda" },
         ],
     },
     education: {
@@ -41,7 +40,7 @@ const resumeData = {
             { date: "Jan, 2026 - July, 2026", role: "The complete Full-stack web Developement Bootcamp", company: "Udemy" },
             { date: "Dec, 2025 - June, 2026", role: "Learn Ethical Hacking From Scratch", company: "Udemy" },
             { date: "Mar, 2024 - May, 2020", role: "Make an open source drone", company: "Udemy" },
-            { date: "2014-2016", role: "Primary", company: "Green Hills Academy" },
+            { date: "2014-2019", role: "Primary", company: "St Leonard Primary School" },
         ],
     },
     skills: {
