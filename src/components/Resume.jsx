@@ -170,13 +170,13 @@ export default function Resume() {
     }, [isResumeOpen]);
 
     return (
-        <section id="resume" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
+        <section id="resume" className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-gradient-to-br dark:from-gray-950 dark:to-black py-20">
 
             <div className="max-w-6xl mx-auto px-5 w-full">
 
                 {/* Header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                    <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
                         My <span className="text-[#80db66]">Resume</span>
                     </h1>
 
@@ -219,7 +219,7 @@ export default function Resume() {
                                         ?
                                         "bg-[#80db66] text-black"
                                         :
-                                        "bg-gray-800 text-white hover:bg-gray-700"
+                                        "bg-slate-200 text-slate-800 hover:bg-slate-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
                                     }
                     `}
                             >
@@ -260,7 +260,7 @@ export default function Resume() {
             md:w-[70%]
             flex
             flex-col
-            text-white
+            text-slate-900 dark:text-white
             md:pl-5
         ">
 
@@ -274,7 +274,7 @@ export default function Resume() {
 
                             <p className="
                     mt-3
-                    text-white/80
+                    text-slate-600 dark:text-white/80
                     text-sm
                     md:text-base
                     leading-relaxed
@@ -326,21 +326,25 @@ export default function Resume() {
                                             key={index}
                                             className="
                         h-28
-                        bg-gray-800
+                        bg-white
+                        dark:bg-gray-800
                         rounded-xl
                         flex
                         flex-col
                         items-center
                         justify-center
                         gap-2
-                        hover:bg-gray-700
+                        hover:bg-slate-100
+                        dark:hover:bg-gray-700
                         transition
+                        shadow-sm
+                        dark:shadow-none
                         "
                                         >
 
                                             <Icon className="text-3xl md:text-4xl" />
 
-                                            <span className="text-xs text-white/70">
+                                            <span className="text-xs text-slate-500 dark:text-white/70">
                                                 {skill.name}
                                             </span>
 
@@ -357,13 +361,16 @@ export default function Resume() {
                                     <div
                                         key={index}
                                         className="
-                    bg-gray-900
+                    bg-white
+                    dark:bg-gray-900
                     p-4
                     rounded-lg
+                    shadow-sm
+                    dark:shadow-none
                     "
                                     >
 
-                                        <span className="text-white/50 text-sm">
+                                        <span className="text-slate-500 dark:text-white/50 text-sm">
                                             {info.label}
                                         </span>
 
@@ -389,10 +396,14 @@ export default function Resume() {
                                         className="
                     min-h-40
                     border
-                    border-white/20
+                    border-slate-200
+                    dark:border-white/20
                     p-5
                     rounded-xl
-                    bg-gray-900/40
+                    bg-white
+                    dark:bg-gray-900/40
+                    shadow-sm
+                    dark:shadow-none
                     "
                                     >
 
@@ -411,7 +422,7 @@ export default function Resume() {
                                         </h2>
 
 
-                                        <p className="text-white/70 mt-4">
+                                        <p className="text-slate-500 dark:text-white/70 mt-4">
                                             &gt; {item.company}
                                         </p>
 

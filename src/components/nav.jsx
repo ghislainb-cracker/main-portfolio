@@ -1,6 +1,23 @@
 import { useState } from "react";
-import { BiSolidMoon } from "react-icons/bi";
+import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 import { HiMenu, HiX } from "react-icons/hi";
+import { useTheme } from "../context/ThemeContext.jsx";
+
+function ThemeToggle({ className }) {
+    const { theme, toggleTheme } = useTheme();
+    const isDark = theme === "dark";
+
+    return (
+        <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            className={className}
+        >
+            {isDark ? <BiSolidSun className="text-lg" /> : <BiSolidMoon className="text-lg" />}
+        </button>
+    );
+}
 
 export const Nav = () => {
     const [open, setOpen] = useState(false);
@@ -50,14 +67,13 @@ export const Nav = () => {
                         ))}
                     </ul>
 
-                    <button className="h-8 w-8 border border-white flex justify-center items-center rounded-full bg-white cursor-pointer">
-                        <BiSolidMoon />
-                    </button>
+                    <ThemeToggle className="h-8 w-8 border border-white flex justify-center items-center rounded-full bg-white text-black cursor-pointer" />
                 </div>
 
 
                 {/* Mobile Burger */}
-                <div className="md:hidden flex items-center">
+                <div className="md:hidden flex items-center gap-3">
+                    <ThemeToggle className="h-8 w-8 border border-white flex justify-center items-center rounded-full bg-white text-black cursor-pointer" />
                     <button
                         onClick={() => setOpen(!open)}
                         className="text-white text-3xl"
@@ -82,10 +98,6 @@ export const Nav = () => {
                                     </a>
                                 </li>
                             ))}
-
-                            <button className="h-8 w-8 border border-white flex justify-center items-center rounded-full bg-white cursor-pointer">
-                                <BiSolidMoon />
-                            </button>
                         </ul>
                     </div>
                 )}

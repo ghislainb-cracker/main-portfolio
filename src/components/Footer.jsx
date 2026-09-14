@@ -5,7 +5,7 @@ import { SiCodeforces, SiGmail, SiHuggingface, SiLeetcode } from "react-icons/si
 
 export default function Footer() {
     return (
-        <div className="w-full h-25 bg-black border-t border-[#80db66] text-white flex flex-col justify-center items-center">
+        <div className="w-full h-25 bg-slate-100 dark:bg-black border-t border-[#80db66] text-slate-800 dark:text-white flex flex-col justify-center items-center">
             <div className="flex gap-2 text-lg lg:gap-6 lg:text-3xl">
 
                 <button>
@@ -70,7 +70,7 @@ export default function Footer() {
                 </button>
 
             </div>
-            <div className="text-[8px]  lg:text-[16px] text-white/75 mt-2">
+            <div className="text-[8px]  lg:text-[16px] text-slate-500 dark:text-white/75 mt-2">
                 <p>&copy;2026 BYIMBO Ghislain. Coding For World</p>
             </div>
         </div>

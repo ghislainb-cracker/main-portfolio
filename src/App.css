@@ -18,6 +18,10 @@ main {
   background-size: cover;
 }
 
+html:not(.dark) .hero {
+  background-image: linear-gradient(rgba(248, 250, 252, 0.88), rgba(241, 245, 249, 0.94)), url("/dot.png");
+}
+
 section,
 div#home {
   opacity: 0;
@@ -212,6 +216,10 @@ div#home.visible {
   /* Firefox: thumb color, track color */
 }
 
+html:not(.dark) .custom-scrollbar {
+  scrollbar-color: #80db66 #e2e8f0;
+}
+
 /* Chrome, Edge, Safari (webkit browsers) */
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
@@ -224,12 +232,20 @@ div#home.visible {
   border-radius: 10px;
 }
 
+html:not(.dark) .custom-scrollbar::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #80db66;
   /* the draggable scrollbar bar, matches your theme green */
   border-radius: 10px;
   border: 2px solid #1f2937;
   /* creates a little padding effect around the thumb */
+}
+
+html:not(.dark) .custom-scrollbar::-webkit-scrollbar-thumb {
+  border: 2px solid #e2e8f0;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -280,6 +296,12 @@ div#home.visible {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+html:not(.dark) .btn {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.12);
 }
 
 .btn:hover {

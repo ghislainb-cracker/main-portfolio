@@ -3,10 +3,10 @@ import ServiceCard from "./templates/service_card.jsx"
 
 export default function Services() {
     return (
-        <section id="services" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
+        <section id="services" className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-gradient-to-br dark:from-gray-950 dark:to-black py-20">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
-                    <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+                    <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
                         What I <span className="text-[#80db66]">Do</span>
                     </h1>
                 </div>

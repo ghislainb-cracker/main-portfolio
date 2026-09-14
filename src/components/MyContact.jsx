@@ -75,10 +75,10 @@ export default function Contacts() {
     }
 
     return (
-        <section id="contact" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20 px-4">
+        <section id="contact" className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-gradient-to-br dark:from-gray-950 dark:to-black py-20 px-4">
             <div className="max-w-6xl w-full">
 
-                <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white text-center mb-12">
                     Get In Touch
                 </h1>
 
@@ -89,7 +89,7 @@ export default function Contacts() {
                     flex-col 
                     lg:flex-row 
                     gap-6
-                    text-white
+                    text-slate-900 dark:text-white
                 ">
 
 
@@ -102,7 +102,8 @@ export default function Contacts() {
                         <form
                             onSubmit={handleSubmit}
                             className="
-                            bg-gray-800 
+                            bg-white dark:bg-gray-800 
+                            shadow-sm dark:shadow-none 
                             p-5 
                             md:p-6
                             rounded-xl
@@ -122,11 +123,11 @@ export default function Contacts() {
                                 onChange={handleChange}
                                 placeholder="Your name"
                                 className="
-                                bg-gray-900 
+                                bg-slate-100 dark:bg-gray-900 
                                 w-full 
                                 px-3 
                                 py-3 
-                                text-white/70 
+                                text-slate-700 dark:text-white/70 
                                 mt-2 
                                 rounded-lg
                                 outline-none
@@ -150,11 +151,11 @@ export default function Contacts() {
                                 onChange={handleChange}
                                 placeholder="youremail@example.com"
                                 className="
-                                bg-gray-900 
+                                bg-slate-100 dark:bg-gray-900 
                                 w-full 
                                 px-3 
                                 py-3 
-                                text-white/70 
+                                text-slate-700 dark:text-white/70 
                                 mt-2 
                                 rounded-lg
                                 outline-none
@@ -177,11 +178,11 @@ export default function Contacts() {
                                 onChange={handleChange}
                                 placeholder="How can I help?"
                                 className="
-                                bg-gray-900 
+                                bg-slate-100 dark:bg-gray-900 
                                 w-full 
                                 px-3 
                                 py-3 
-                                text-white/70 
+                                text-slate-700 dark:text-white/70 
                                 mt-2 
                                 rounded-lg
                                 outline-none
@@ -203,12 +204,12 @@ export default function Contacts() {
                                 onChange={handleChange}
                                 placeholder="Tell me about your project"
                                 className="
-                                bg-gray-900 
+                                bg-slate-100 dark:bg-gray-900 
                                 w-full 
                                 h-32
                                 px-3 
                                 py-3 
-                                text-white/70 
+                                text-slate-700 dark:text-white/70 
                                 mt-2 
                                 rounded-lg
                                 resize-none
@@ -289,7 +290,8 @@ export default function Contacts() {
 
                         {/* CONNECT */}
                         <div className="
-                            bg-gray-800
+                            bg-white dark:bg-gray-800 
+                            shadow-sm dark:shadow-none
                             p-5
                             rounded-xl
                         ">
@@ -300,7 +302,7 @@ export default function Contacts() {
 
 
                             <p className="
-                                text-white/80
+                                text-slate-600 dark:text-white/80
                                 mt-3
                                 leading-relaxed
                             ">
@@ -323,7 +325,7 @@ export default function Contacts() {
                                     flex
                                     items-center
                                     gap-2
-                                    bg-gray-900
+                                    bg-slate-100 dark:bg-gray-900
                                     px-4
                                     py-3
                                     rounded-lg
@@ -337,7 +339,7 @@ export default function Contacts() {
                                     flex
                                     items-center
                                     gap-2
-                                    bg-gray-900
+                                    bg-slate-100 dark:bg-gray-900
                                     px-4
                                     py-3
                                     rounded-lg
@@ -351,7 +353,7 @@ export default function Contacts() {
                                     flex
                                     items-center
                                     gap-2
-                                    bg-gray-900
+                                    bg-slate-100 dark:bg-gray-900
                                     px-4
                                     py-3
                                     rounded-lg
@@ -367,7 +369,7 @@ export default function Contacts() {
                                     flex
                                     items-center
                                     gap-2
-                                    bg-gray-900
+                                    bg-slate-100 dark:bg-gray-900
                                     px-4
                                     py-3
                                     rounded-lg
@@ -385,7 +387,8 @@ export default function Contacts() {
 
                         {/* QUICK FACTS */}
                         <div className="
-                            bg-gray-800
+                            bg-white dark:bg-gray-800 
+                            shadow-sm dark:shadow-none
                             p-5
                             rounded-xl
                         ">
@@ -398,7 +401,7 @@ export default function Contacts() {
                             <ul className="
                                 mt-5
                                 space-y-4
-                                text-white/90
+                                text-slate-700 dark:text-white/90
                             ">
 
                                 <li>

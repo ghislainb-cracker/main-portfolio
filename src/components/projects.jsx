@@ -130,10 +130,10 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-950/100 to-black py-20">
+    <section id="projects" className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-gradient-to-br dark:from-gray-950/100 dark:to-black py-20">
       <div className="max-w-2xl mx-auto flex flex-col items-center justify-center px-5">
         <div className="text-center mb-10">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
             My <span className="text-[#80db66]">Projects</span>
           </h1>
           <div className="w-24 h-1 bg-[#80db66] mx-auto rounded-full"></div>
@@ -167,10 +167,10 @@ export default function Projects() {
 
         {/* Step 3: Details panel for whichever project is currently facing forward */}
         <div className="w-full rounded-xl p-6 text-center transition-all duration-300">
-          <h3 className="text-2xl font-semibold text-white mb-2">
+          <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-2">
             {activeProject.title}
           </h3>
-          <p className="text-white/70 font-light mb-4">
+          <p className="text-slate-600 dark:text-white/70 font-light mb-4">
             {activeProject.description}
           </p>
 
@@ -191,7 +191,7 @@ export default function Projects() {
                 href={activeProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/80 hover:text-[#80db66] transition-colors duration-200"
+                className="flex items-center gap-2 text-slate-600 dark:text-white/80 hover:text-[#80db66] transition-colors duration-200"
               >
                 <FaGithub /> Code
               </a>
@@ -201,7 +201,7 @@ export default function Projects() {
                 href={activeProject.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/80 hover:text-[#80db66] transition-colors duration-200"
+                className="flex items-center gap-2 text-slate-600 dark:text-white/80 hover:text-[#80db66] transition-colors duration-200"
               >
                 <FaExternalLinkAlt /> Live Demo
               </a>

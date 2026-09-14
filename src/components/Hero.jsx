@@ -21,7 +21,7 @@ export const Hero = () => {
 
 
                     {/* Subtitle */}
-                    <p className="text-gray-400 text-[14px] mt-5 font-medium leading-relaxed">
+                    <p className="text-slate-500 dark:text-gray-400 text-[14px] mt-5 font-medium leading-relaxed">
                         I build software today with the ambition to build technology companies tomorrow
                     </p>
 
@@ -58,7 +58,7 @@ export const Hero = () => {
                         <div className="ml-9">
 
                             <div>
-                                <h3 className="text-2xl text-white font-bold">
+                                <h3 className="text-2xl text-slate-900 dark:text-white font-bold">
                                     HELLO I'M
                                 </h3>
 
@@ -71,7 +71,7 @@ export const Hero = () => {
                             </div>
 
 
-                            <div className="flex gap-3 text-white mt-11 items-center">
+                            <div className="flex gap-3 text-slate-900 dark:text-white mt-11 items-center">
                                 <h3 className="text-2xl font-medium">
                                     A Passionate
                                 </h3>
@@ -82,7 +82,7 @@ export const Hero = () => {
                             </div>
 
 
-                            <div className="text-gray-400 mt-4">
+                            <div className="text-slate-500 dark:text-gray-400 mt-4">
                                 <h3 className="font-medium text-[14px]">
                                     I build software today with the ambition to build technology companies tomorrow.
                                 </h3>
@@ -152,7 +152,10 @@ export const Hero = () => {
                                         h-12 
                                         w-12 
                                         border 
-                                        border-white 
+                                        border-slate-700
+                                        bg-slate-900
+                                        dark:bg-transparent
+                                        dark:border-white 
                                         flex 
                                         justify-center 
                                         items-center 
