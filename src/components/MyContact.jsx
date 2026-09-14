@@ -1,8 +1,79 @@
-import React from "react"
+import React, { useState } from "react"
 import { FaGithub, FaLinkedin, FaX } from "react-icons/fa6"
 import { MdEmail } from "react-icons/md"
 
+const CONTACT_EMAIL = "byimbog250@gmail.com"
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
+
 export default function Contacts() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        honey: "",
+    })
+    const [status, setStatus] = useState("idle")
+    const [errorMessage, setErrorMessage] = useState("")
+
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        setFormData((current) => ({ ...current, [name]: value }))
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+        if (status === "sending") return
+
+        setStatus("sending")
+        setErrorMessage("")
+
+        try {
+            const response = await fetch(FORM_ENDPOINT, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    _honey: formData.honey,
+                    _captcha: "false",
+                    _template: "table",
+                    _subject: formData.subject
+                        ? `Portfolio message: ${formData.subject}`
+                        : "New message from portfolio contact form",
+                }),
+            })
+
+            const result = await response.json()
+            const succeeded = response.ok && (result.success === true || result.success === "true")
+
+            if (!succeeded) {
+                throw new Error(result.message || "Could not send your message.")
+            }
+
+            setStatus("success")
+            setFormData({
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+                honey: "",
+            })
+        } catch (error) {
+            setStatus("error")
+            setErrorMessage(
+                error instanceof Error
+                    ? error.message
+                    : "Something went wrong. Please email me directly."
+            )
+        }
+    }
+
     return (
         <section id="contact" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20 px-4">
             <div className="max-w-6xl w-full">
@@ -28,19 +99,27 @@ export default function Contacts() {
                         lg:w-[60%]
                     ">
 
-                        <form className="
+                        <form
+                            onSubmit={handleSubmit}
+                            className="
                             bg-gray-800 
                             p-5 
                             md:p-6
                             rounded-xl
                         ">
 
-                            <h3 className="font-semibold mt-3">
+                            <label htmlFor="contact-name" className="font-semibold mt-3 block">
                                 Name
-                            </h3>
+                            </label>
 
                             <input
+                                id="contact-name"
+                                name="name"
                                 type="text"
+                                autoComplete="name"
+                                required
+                                value={formData.name}
+                                onChange={handleChange}
                                 placeholder="Your name"
                                 className="
                                 bg-gray-900 
@@ -57,12 +136,18 @@ export default function Contacts() {
                             />
 
 
-                            <h3 className="font-semibold mt-4">
+                            <label htmlFor="contact-email" className="font-semibold mt-4 block">
                                 Email
-                            </h3>
+                            </label>
 
                             <input
+                                id="contact-email"
+                                name="email"
                                 type="email"
+                                autoComplete="email"
+                                required
+                                value={formData.email}
+                                onChange={handleChange}
                                 placeholder="youremail@example.com"
                                 className="
                                 bg-gray-900 
@@ -79,12 +164,17 @@ export default function Contacts() {
                             />
 
 
-                            <h3 className="font-semibold mt-4">
+                            <label htmlFor="contact-subject" className="font-semibold mt-4 block">
                                 Subject
-                            </h3>
+                            </label>
 
                             <input
+                                id="contact-subject"
+                                name="subject"
                                 type="text"
+                                required
+                                value={formData.subject}
+                                onChange={handleChange}
                                 placeholder="How can I help?"
                                 className="
                                 bg-gray-900 
@@ -101,11 +191,16 @@ export default function Contacts() {
                             />
 
 
-                            <h3 className="font-semibold mt-4">
+                            <label htmlFor="contact-message" className="font-semibold mt-4 block">
                                 Message
-                            </h3>
+                            </label>
 
                             <textarea
+                                id="contact-message"
+                                name="message"
+                                required
+                                value={formData.message}
+                                onChange={handleChange}
                                 placeholder="Tell me about your project"
                                 className="
                                 bg-gray-900 
@@ -123,8 +218,21 @@ export default function Contacts() {
                                 "
                             />
 
+                            <input
+                                type="text"
+                                name="honey"
+                                value={formData.honey}
+                                onChange={handleChange}
+                                tabIndex={-1}
+                                autoComplete="off"
+                                className="hidden"
+                                aria-hidden="true"
+                            />
+
 
                             <button
+                                type="submit"
+                                disabled={status === "sending"}
                                 className="
                                 w-full
                                 py-3
@@ -136,10 +244,31 @@ export default function Contacts() {
                                 hover:scale-[1.02]
                                 transition
                                 cursor-pointer
+                                disabled:cursor-wait
+                                disabled:opacity-70
+                                disabled:hover:scale-100
                                 "
                             >
-                                Send Message
+                                {status === "sending" ? "Sending..." : "Send Message"}
                             </button>
+
+                            {status === "success" && (
+                                <p className="mt-4 text-sm text-[#80db66]">
+                                    Message sent. I will get back to you soon.
+                                </p>
+                            )}
+
+                            {status === "error" && (
+                                <p className="mt-4 text-sm text-red-400">
+                                    {errorMessage} You can also reach me at{" "}
+                                    <a
+                                        href={`mailto:${CONTACT_EMAIL}`}
+                                        className="underline"
+                                    >
+                                        {CONTACT_EMAIL}
+                                    </a>.
+                                </p>
+                            )}
 
 
                         </form>
@@ -232,7 +361,9 @@ export default function Contacts() {
                                 </button>
 
 
-                                <button className="
+                                <a
+                                    href={`mailto:${CONTACT_EMAIL}`}
+                                    className="
                                     flex
                                     items-center
                                     gap-2
@@ -243,7 +374,7 @@ export default function Contacts() {
                                 ">
                                     <MdEmail />
                                     Email
-                                </button>
+                                </a>
 
 
                             </div>
