@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { FaEye } from "react-icons/fa6";
+import React, { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { FaDownload, FaEye, FaXmark } from "react-icons/fa6";
+import resumeHtml from "./resume.html?raw";
 import {
     SiPython,
     SiJavascript,
@@ -94,7 +96,78 @@ const tabs = [
 
 export default function Resume() {
     const [activeTab, setActiveTab] = useState("experience");
+    const [isResumeOpen, setIsResumeOpen] = useState(false);
+    const [isDownloading, setIsDownloading] = useState(false);
+    const resumeFrameRef = useRef(null);
     const activeContent = resumeData[activeTab];
+
+    const handleDownloadPdf = async () => {
+        const resumeEl = resumeFrameRef.current?.contentDocument?.querySelector(".resume");
+        if (!resumeEl || isDownloading) return;
+
+        setIsDownloading(true);
+
+        try {
+            const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
+                import("html2canvas"),
+                import("jspdf"),
+            ]);
+
+            const canvas = await html2canvas(resumeEl, {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: "#ffffff",
+                width: resumeEl.scrollWidth,
+                height: resumeEl.scrollHeight,
+                windowWidth: resumeEl.scrollWidth,
+                windowHeight: resumeEl.scrollHeight,
+            });
+
+            const imageData = canvas.toDataURL("image/jpeg", 0.98);
+            const pdf = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+            const pageWidth = pdf.internal.pageSize.getWidth();
+            const pageHeight = pdf.internal.pageSize.getHeight();
+            const imageWidth = pageWidth;
+            const imageHeight = (canvas.height * imageWidth) / canvas.width;
+
+            let heightLeft = imageHeight;
+            let position = 0;
+
+            pdf.addImage(imageData, "JPEG", 0, position, imageWidth, imageHeight);
+            heightLeft -= pageHeight;
+
+            while (heightLeft > 0) {
+                position -= pageHeight;
+                pdf.addPage();
+                pdf.addImage(imageData, "JPEG", 0, position, imageWidth, imageHeight);
+                heightLeft -= pageHeight;
+            }
+
+            pdf.save("Byimbo_Ghislain_Resume.pdf");
+        } finally {
+            setIsDownloading(false);
+        }
+    };
+
+    useEffect(() => {
+        if (!isResumeOpen) return;
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+
+        const handleKeyDown = (event) => {
+            if (event.key === "Escape") {
+                setIsResumeOpen(false);
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [isResumeOpen]);
 
     return (
         <section id="resume" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 to-black py-20">
@@ -156,6 +229,8 @@ export default function Resume() {
 
 
                         <button
+                            type="button"
+                            onClick={() => setIsResumeOpen(true)}
                             className="
             hidden
             md:flex
@@ -167,6 +242,7 @@ export default function Resume() {
             py-3
             rounded-full
             mt-4
+            cursor-pointer
             "
                         >
                             <FaEye />
@@ -353,6 +429,8 @@ export default function Resume() {
 
                         {/* Mobile Resume button */}
                         <button
+                            type="button"
+                            onClick={() => setIsResumeOpen(true)}
                             className="
             md:hidden
             flex
@@ -364,6 +442,7 @@ export default function Resume() {
             py-3
             rounded-full
             mt-6
+            cursor-pointer
             "
                         >
                             <FaEye />
@@ -378,6 +457,52 @@ export default function Resume() {
                 </div>
 
             </div>
+
+            {isResumeOpen &&
+                createPortal(
+                    <div
+                        className="fixed inset-0 z-[200] flex flex-col bg-black/80 p-3 md:p-6"
+                        onClick={() => setIsResumeOpen(false)}
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Resume viewer"
+                    >
+                        <div
+                            className="flex h-full min-h-0 w-full flex-col overflow-hidden rounded-xl bg-[#e8ecf1]"
+                            onClick={(event) => event.stopPropagation()}
+                        >
+                            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 bg-white px-4 py-3">
+                                <p className="font-medium text-slate-800">Byimbo Ghislain — Resume</p>
+                                <div className="flex items-center gap-2">
+                                    <button
+                                        type="button"
+                                        onClick={handleDownloadPdf}
+                                        disabled={isDownloading}
+                                        className="flex items-center gap-2 rounded-full bg-[#80db66] px-4 py-2 text-sm font-medium text-black cursor-pointer disabled:cursor-wait disabled:opacity-70"
+                                    >
+                                        <FaDownload />
+                                        {isDownloading ? "Downloading..." : "Download PDF"}
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsResumeOpen(false)}
+                                        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#80db66] text-black cursor-pointer"
+                                        aria-label="Close resume"
+                                    >
+                                        <FaXmark />
+                                    </button>
+                                </div>
+                            </div>
+                            <iframe
+                                ref={resumeFrameRef}
+                                srcDoc={resumeHtml}
+                                title="Resume"
+                                className="h-full min-h-0 w-full flex-1 border-0 bg-[#e8ecf1]"
+                            />
+                        </div>
+                    </div>,
+                    document.body
+                )}
 
         </section>
     );
