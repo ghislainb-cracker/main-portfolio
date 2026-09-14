@@ -163,6 +163,7 @@ export const Hero = () => {
                                 >
                                     <img 
                                         src={`/${icon}`} 
+                                        href=""
                                         alt=""
                                         className="h-5 w-5 object-contain"
                                     />
