@@ -8,6 +8,7 @@ import Services from "./components/services";
 import Resume from "./components/Resume";
 import Contacts from "./components/MyContact";
 import Footer from "./components/Footer";
+import PageLoader from "./components/PageLoader";
 import "./App.css";
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
 
   return (
     <>
+      <PageLoader />
       <main className="overflow-x-hidden">
         <div className="w-full h-screen pt-4 hero">
           <Nav />
