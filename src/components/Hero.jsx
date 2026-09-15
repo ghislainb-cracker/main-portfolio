@@ -1,3 +1,7 @@
+const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 export const Hero = () => {
     return (
         <>
@@ -6,44 +10,48 @@ export const Hero = () => {
                 {/* MOBILE HERO */}
                 <div className="md:hidden flex flex-col items-center justify-center text-center px-5 pt-8">
 
-                    {/* Image first */}
-                    <img 
-                        src="/my-pic.jpeg" 
+                    <img
+                        src="/my-pic.jpeg"
                         alt="Ghislain"
-                        className="h-62 w-62 rounded-full border border-white bg-[#4d77ff] shadow-lg object-cover brightness-75"
+                        className="hero-photo reveal reveal-scale h-62 w-62 rounded-full border border-white bg-[#4d77ff] shadow-lg object-cover brightness-75"
                     />
 
 
-                    {/* Name inline */}
-                    <h1 className="text-3xl text-[#80db66] font-bold mt-8 tracking-wide">
+                    <h1 className="reveal text-3xl text-[#80db66] font-bold mt-8 tracking-wide" style={{ "--d": "120ms" }}>
                         Ghislain Byimbo
                     </h1>
 
 
-                    {/* Subtitle */}
-                    <p className="text-slate-500 dark:text-gray-400 text-[14px] mt-5 font-medium leading-relaxed">
+                    <p className="reveal text-slate-500 dark:text-gray-400 text-[14px] mt-5 font-medium leading-relaxed" style={{ "--d": "220ms" }}>
                         I build software today with the ambition to build technology companies tomorrow
                     </p>
 
 
-                    {/* CTA */}
-                    <button className="
-                        mt-8 
-                        py-3 
-                        px-10 
-                        text-white 
-                        font-medium 
-                        text-lg 
-                        rounded-lg 
+                    <button
+                        type="button"
+                        onClick={scrollToContact}
+                        className="
+                        hero-cta
+                        reveal
+                        mt-8
+                        py-3
+                        px-10
+                        text-white
+                        font-medium
+                        text-lg
+                        rounded-lg
                         cursor-pointer
-                        bg-gradient-to-r 
-                        from-[#4d77ff] 
+                        bg-gradient-to-r
+                        from-[#4d77ff]
                         to-[#4b6cff]
-                        hover:from-purple-600 
+                        hover:from-purple-600
                         hover:to-violet-500
-                        transition-all 
-                        duration-1000
-                    ">
+                        hover:scale-105
+                        transition-all
+                        duration-500
+                    "
+                        style={{ "--d": "320ms" }}
+                    >
                         Say hello 🙌
                     </button>
 
@@ -58,11 +66,11 @@ export const Hero = () => {
                         <div className="ml-9">
 
                             <div>
-                                <h3 className="text-2xl text-slate-900 dark:text-white font-bold">
+                                <h3 className="reveal text-2xl text-slate-900 dark:text-white font-bold">
                                     HELLO I'M
                                 </h3>
 
-                                <h1 className="text-8xl text-[#80db66] font-bold tracking-wide">
+                                <h1 className="reveal text-8xl text-[#80db66] font-bold tracking-wide" style={{ "--d": "120ms" }}>
                                     Ghislain <br />
                                     <span className="ml-32">
                                         Byimbo
@@ -71,7 +79,7 @@ export const Hero = () => {
                             </div>
 
 
-                            <div className="flex gap-3 text-slate-900 dark:text-white mt-11 items-center">
+                            <div className="reveal flex gap-3 text-slate-900 dark:text-white mt-11 items-center" style={{ "--d": "220ms" }}>
                                 <h3 className="text-2xl font-medium">
                                     A Passionate
                                 </h3>
@@ -82,32 +90,40 @@ export const Hero = () => {
                             </div>
 
 
-                            <div className="text-slate-500 dark:text-gray-400 mt-4">
+                            <div className="reveal text-slate-500 dark:text-gray-400 mt-4" style={{ "--d": "300ms" }}>
                                 <h3 className="font-medium text-[14px]">
                                     I build software today with the ambition to build technology companies tomorrow.
                                 </h3>
                             </div>
 
 
-                            <button className="
-                                mt-11 
-                                py-2 
-                                px-8 
-                                text-white 
-                                font-medium 
-                                text-lg 
-                                rounded-lg 
+                            <button
+                                type="button"
+                                onClick={scrollToContact}
+                                className="
+                                hero-cta
+                                reveal
+                                mt-11
+                                py-2
+                                px-8
+                                text-white
+                                font-medium
+                                text-lg
+                                rounded-lg
                                 cursor-pointer
-                                flex 
-                                items-center 
-                                bg-gradient-to-r 
-                                from-[#4d77ff] 
+                                flex
+                                items-center
+                                bg-gradient-to-r
+                                from-[#4d77ff]
                                 to-[#4b6cff]
-                                hover:from-purple-600 
-                                hover:to-violet-500 
-                                transition-all 
-                                duration-1000
-                            ">
+                                hover:from-purple-600
+                                hover:to-violet-500
+                                hover:scale-105
+                                transition-all
+                                duration-500
+                            "
+                                style={{ "--d": "400ms" }}
+                            >
                                 Say hello 🙌
                             </button>
 
@@ -119,18 +135,21 @@ export const Hero = () => {
                     <div className="w-1/2 h-full flex items-center justify-between pr-2">
 
                         <div className="h-full w-135 flex justify-center items-center shadow-md card relative">
-                            <img 
-                                src="/my-pic.jpeg" 
+                            <img
+                                src="/my-pic.jpeg"
                                 alt=""
                                 className="
-                                    brightness-60 
-                                    h-90 
-                                    w-90 
-                                    rounded-full 
-                                    border 
-                                    border-white 
-                                    bg-[#4d77ff] 
-                                    shadow-lg 
+                                    hero-photo
+                                    reveal
+                                    reveal-scale
+                                    brightness-60
+                                    h-90
+                                    w-90
+                                    rounded-full
+                                    border
+                                    border-white
+                                    bg-[#4d77ff]
+                                    shadow-lg
                                     object-cover
                                 "
                             />
@@ -144,28 +163,31 @@ export const Hero = () => {
                                 "github.png",
                                 "linkedIn.png",
                                 "twitter.png"
-                            ].map((icon) => (
-                                <div 
+                            ].map((icon, index) => (
+                                <div
                                     key={icon}
                                     className="
-                                        rounded 
-                                        h-12 
-                                        w-12 
-                                        border 
+                                        social-orb
+                                        reveal
+                                        rounded
+                                        h-12
+                                        w-12
+                                        border
                                         border-slate-700
                                         bg-slate-900
                                         dark:bg-transparent
-                                        dark:border-white 
-                                        flex 
-                                        justify-center 
-                                        items-center 
-                                        cursor-pointer 
-                                        hover:bg-[#4d77ff] 
+                                        dark:border-white
+                                        flex
+                                        justify-center
+                                        items-center
+                                        cursor-pointer
+                                        hover:bg-[#4d77ff]
                                         hover:border-none
                                     "
+                                    style={{ "--d": `${280 + index * 80}ms` }}
                                 >
-                                    <img 
-                                        src={`/${icon}`} 
+                                    <img
+                                        src={`/${icon}`}
                                         href=""
                                         alt=""
                                         className="h-5 w-5 object-contain"

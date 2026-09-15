@@ -78,7 +78,7 @@ export default function Contacts() {
         <section id="contact" className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-gradient-to-br dark:from-gray-950 dark:to-black py-20 px-4">
             <div className="max-w-6xl w-full">
 
-                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white text-center mb-12">
+                <h1 className="reveal text-4xl md:text-5xl font-bold text-slate-900 dark:text-white text-center mb-12">
                     Get In Touch
                 </h1>
 
@@ -97,6 +97,8 @@ export default function Contacts() {
                     <div className="
                         w-full 
                         lg:w-[60%]
+                        reveal
+                        reveal-left
                     ">
 
                         <form
@@ -285,7 +287,9 @@ export default function Contacts() {
                         flex
                         flex-col
                         gap-6
-                    ">
+                        reveal
+                        reveal-right
+                    " style={{ "--d": "120ms" }}>
 
 
                         {/* CONNECT */}
@@ -329,6 +333,10 @@ export default function Contacts() {
                                     px-4
                                     py-3
                                     rounded-lg
+                                    transition
+                                    duration-300
+                                    hover:scale-[1.03]
+                                    hover:bg-[#80db66]/15
                                 ">
                                     <FaGithub />
                                     Github
@@ -343,6 +351,10 @@ export default function Contacts() {
                                     px-4
                                     py-3
                                     rounded-lg
+                                    transition
+                                    duration-300
+                                    hover:scale-[1.03]
+                                    hover:bg-[#80db66]/15
                                 ">
                                     <FaLinkedin />
                                     LinkedIn
@@ -357,6 +369,10 @@ export default function Contacts() {
                                     px-4
                                     py-3
                                     rounded-lg
+                                    transition
+                                    duration-300
+                                    hover:scale-[1.03]
+                                    hover:bg-[#80db66]/15
                                 ">
                                     <FaX />
                                     X
@@ -373,6 +389,10 @@ export default function Contacts() {
                                     px-4
                                     py-3
                                     rounded-lg
+                                    transition
+                                    duration-300
+                                    hover:scale-[1.03]
+                                    hover:bg-[#80db66]/15
                                 ">
                                     <MdEmail />
                                     Email

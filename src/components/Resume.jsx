@@ -176,11 +176,11 @@ export default function Resume() {
 
                 {/* Header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
+                    <h1 className="reveal text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
                         My <span className="text-[#80db66]">Resume</span>
                     </h1>
 
-                    <div className="w-24 h-1 bg-[#80db66] mx-auto rounded-full"></div>
+                    <div className="section-line w-24 h-1 bg-[#80db66] mx-auto rounded-full"></div>
                 </div>
 
 
@@ -198,7 +198,9 @@ export default function Resume() {
             gap-3
             overflow-x-auto
             md:overflow-visible
-        ">
+            reveal
+            reveal-left
+        " style={{ "--d": "80ms" }}>
 
                         {tabs.map((tab) => (
                             <button
@@ -214,6 +216,7 @@ export default function Resume() {
                     rounded-lg
                     cursor-pointer
                     transition-all
+                    hover:scale-[1.02]
                     
                     ${activeTab === tab.key
                                         ?
@@ -243,6 +246,8 @@ export default function Resume() {
             rounded-full
             mt-4
             cursor-pointer
+            hover:scale-105
+            transition-transform
             "
                         >
                             <FaEye />
@@ -262,10 +267,12 @@ export default function Resume() {
             flex-col
             text-slate-900 dark:text-white
             md:pl-5
-        ">
+            reveal
+            reveal-right
+        " style={{ "--d": "140ms" }}>
 
 
-                        <div>
+                        <div key={activeTab} className="resume-swap">
 
                             <h3 className="font-medium text-xl">
                                 {activeContent.title}
@@ -336,7 +343,10 @@ export default function Resume() {
                         gap-2
                         hover:bg-slate-100
                         dark:hover:bg-gray-700
+                        hover:-translate-y-1
+                        hover:scale-[1.03]
                         transition
+                        duration-300
                         shadow-sm
                         dark:shadow-none
                         "
@@ -367,6 +377,9 @@ export default function Resume() {
                     rounded-lg
                     shadow-sm
                     dark:shadow-none
+                    transition
+                    duration-300
+                    hover:-translate-y-1
                     "
                                     >
 
@@ -404,6 +417,10 @@ export default function Resume() {
                     dark:bg-gray-900/40
                     shadow-sm
                     dark:shadow-none
+                    transition
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-[#80db66]/50
                     "
                                     >
 

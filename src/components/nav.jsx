@@ -12,7 +12,7 @@ function ThemeToggle({ className }) {
             type="button"
             onClick={toggleTheme}
             aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-            className={className}
+            className={`${className} transition-transform duration-300 hover:rotate-12`}
         >
             {isDark ? <BiSolidSun className="text-lg" /> : <BiSolidMoon className="text-lg" />}
         </button>
@@ -41,7 +41,7 @@ export const Nav = () => {
     };
 
     return (
-        <div className="flex justify-center items-center px-4">
+        <div className="flex justify-center items-center px-4 nav-wrap">
             <nav className="h-20 bg-[#4d77ff] flex justify-between items-center px-5 w-full max-w-6xl rounded-lg relative">
 
 

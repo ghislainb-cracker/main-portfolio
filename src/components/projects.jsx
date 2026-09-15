@@ -133,15 +133,15 @@ export default function Projects() {
     <section id="projects" className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-gradient-to-br dark:from-gray-950/100 dark:to-black py-20">
       <div className="max-w-2xl mx-auto flex flex-col items-center justify-center px-5">
         <div className="text-center mb-10">
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
+          <h1 className="reveal text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
             My <span className="text-[#80db66]">Projects</span>
           </h1>
-          <div className="w-24 h-1 bg-[#80db66] mx-auto rounded-full"></div>
+          <div className="section-line w-24 h-1 bg-[#80db66] mx-auto rounded-full"></div>
         </div>
 
         {/* Carousel — pausing auto-rotate on hover so users can look without it spinning away */}
         <div
-          className="image-container mt-30 mb-8 self-center"
+          className="image-container mt-30 mb-8 self-center reveal reveal-scale"
           ref={imageContainerRef}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -166,7 +166,7 @@ export default function Projects() {
         </div>
 
         {/* Step 3: Details panel for whichever project is currently facing forward */}
-        <div className="w-full rounded-xl p-6 text-center transition-all duration-300">
+        <div className="w-full rounded-xl p-6 text-center transition-all duration-300 project-details" key={activeProject.title}>
           <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-2">
             {activeProject.title}
           </h3>
