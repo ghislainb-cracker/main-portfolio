@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -41,7 +41,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 22px;
+      gap: 28px;
+      padding: 24px;
       background: #030712;
       color: #fff;
       font-family: Montserrat, sans-serif;
@@ -63,63 +64,89 @@
       overflow: hidden;
     }
 
-    .loader-mark {
-      width: 84px;
-      height: 84px;
-      border-radius: 22px;
-      display: grid;
-      place-items: center;
-      background: #4d77ff;
-      color: #80db66;
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      animation: loader-pulse 1.4s ease-in-out infinite;
+    .loader-name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(3rem, 9vw, 6.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
     }
 
-    .loader-bar {
-      width: 148px;
-      height: 4px;
+    .loader-name span {
+      display: inline-block;
+      background: linear-gradient(120deg, #80db66 10%, #ffffff 45%, #4d77ff 80%);
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 0;
+      transform: translateY(22px) rotate(-8deg) scale(0.8);
+      filter: blur(6px);
+      animation: loader-letter 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+        loader-shimmer 2.4s linear infinite;
+      animation-delay: calc(var(--i) * 0.08s), calc(var(--i) * 0.08s + 0.7s);
+    }
+
+    html:not(.dark) .loader-name span {
+      background: linear-gradient(120deg, #4d77ff 10%, #1e293b 45%, #80db66 80%);
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .loader-name .space {
+      width: 0.38em;
+      opacity: 1;
+      background: none;
+      filter: none;
+      transform: none;
+      animation: none;
+    }
+
+    #app-loader.is-complete .loader-name span {
+      animation: loader-letter 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+        loader-settle 0.6s ease forwards;
+      animation-delay: 0s, 0s;
+    }
+
+    .loader-track {
+      width: min(280px, 70vw);
+      height: 3px;
       overflow: hidden;
       border-radius: 999px;
       background: rgba(128, 219, 102, 0.18);
     }
 
-    .loader-bar span {
+    .loader-track span {
       display: block;
-      width: 40%;
+      width: 8%;
       height: 100%;
       border-radius: inherit;
-      background: #80db66;
-      animation: loader-slide 1.1s ease-in-out infinite;
+      background: linear-gradient(90deg, #4d77ff, #80db66);
+      transition: width 0.25s ease;
     }
 
-    .loader-text {
-      margin: 0;
-      font-size: 13px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      opacity: 0.7;
-    }
-
-    @keyframes loader-pulse {
-      0%,
-      100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(77, 119, 255, 0.35);
-      }
-      50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 14px rgba(77, 119, 255, 0);
+    @keyframes loader-letter {
+      to {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg) scale(1);
+        filter: blur(0);
       }
     }
 
-    @keyframes loader-slide {
-      0% {
-        transform: translateX(-120%);
+    @keyframes loader-shimmer {
+      to {
+        background-position: 220% center;
       }
-      100% {
-        transform: translateX(340%);
+    }
+
+    @keyframes loader-settle {
+      to {
+        background-position: 50% center;
       }
     }
   </style>
@@ -127,9 +154,24 @@
 
 <body>
   <div id="app-loader" aria-busy="true" aria-live="polite">
-    <div class="loader-mark">GB</div>
-    <div class="loader-bar"><span></span></div>
-    <p class="loader-text">Loading</p>
+    <h1 class="loader-name" aria-label="Ghislain Byimbo">
+      <span style="--i:0">G</span>
+      <span style="--i:1">h</span>
+      <span style="--i:2">i</span>
+      <span style="--i:3">s</span>
+      <span style="--i:4">l</span>
+      <span style="--i:5">a</span>
+      <span style="--i:6">i</span>
+      <span style="--i:7">n</span>
+      <span class="space" style="--i:8"></span>
+      <span style="--i:9">B</span>
+      <span style="--i:10">y</span>
+      <span style="--i:11">i</span>
+      <span style="--i:12">m</span>
+      <span style="--i:13">b</span>
+      <span style="--i:14">o</span>
+    </h1>
+    <div class="loader-track"><span id="loader-progress"></span></div>
   </div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
